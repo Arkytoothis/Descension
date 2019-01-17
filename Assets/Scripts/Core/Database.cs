@@ -894,7 +894,6 @@ namespace Descension.Core
             temp.SkillProficiencies.Add(new SkillProficiency(Skill.Survival, 2, 1));
             temp.SkillProficiencies.Add(new SkillProficiency(Skill.Air_Magic, 1, 0));
             temp.SkillProficiencies.Add(new SkillProficiency(Skill.Bucklers, 1, 0));
-            temp.SkillProficiencies.Add(new SkillProficiency(Skill.Precision, 1, 0));
             temp.Powers.Add(new AbilityUnlock(AbilityType.Power, "Eagle Eye", 1));
             temp.AttributePriorities.Add(BaseAttribute.Senses);
             temp.AttributePriorities.Add(BaseAttribute.Agility);
@@ -1188,7 +1187,7 @@ namespace Descension.Core
             //temp.Traits.Add(new AbilityUnlock(AbilityType.Trait, "Fast Learner", 1));
             //races.Add(temp.Key, temp);
 
-            temp = new Race("Ogrin", "Ogrin", "Ogrin Male", "Ogrin Female", false, "", "", true, true,
+            temp = new Race("Half Ogre", "Half Ogre", "Half Ogre Male", "Half Ogre Female", false, "", "", true, true,
                 new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 10, 1.1f, new UpkeepData(0, 7, 0, 0), new GameValue(1, 5),
                 new Vector3(1, 1, 1), "hair 13", "beard 01", "hair 15", "");
             temp.StartingAttributes[(int)BaseAttribute.Strength].Number = 8;
@@ -1446,12 +1445,12 @@ namespace Descension.Core
             ability.Components.Add(new DurationComponent(DurationType.Instant, TimeType.None));
             abilities.Add(ability.Key, ability);
 
-            ability = new Ability("Repair", "Repair", "repair", AbilityClass.Encounter, AbilityType.Power, 5f, 1000, Skill.Crafting, 5);
+            ability = new Ability("Repair", "Repair", "repair", AbilityClass.Encounter, AbilityType.Power, 5f, 1000, Skill.None, 5);
             ability.Components.Add(new ResourceComponent(DerivedAttribute.Stamina, 10));
             ability.Components.Add(new DurationComponent(DurationType.Instant, TimeType.None));
             abilities.Add(ability.Key, ability);
 
-            ability = new Ability("Rebuild", "Rebuild", "rebuild", AbilityClass.Encounter, AbilityType.Power, 5f, 1000, Skill.Engineering, 5);
+            ability = new Ability("Rebuild", "Rebuild", "rebuild", AbilityClass.Encounter, AbilityType.Power, 5f, 1000, Skill.None, 5);
             ability.Components.Add(new ResourceComponent(DerivedAttribute.Stamina, 10));
             ability.Components.Add(new DurationComponent(DurationType.Instant, TimeType.None));
             abilities.Add(ability.Key, ability);
@@ -1978,17 +1977,10 @@ namespace Descension.Core
                     AttributeCalculationOpperator.None));
             derivedAttributeDefinitions.Add(dA);
 
-            dA = new AttributeDefinition("Spell Damage", "Spell Dmg", "Sdmg", "", -1000, 1000, AttributeDefinitionType.Derived_Percent, new AttributeCalculation(
+            dA = new AttributeDefinition("Spell Power", "Spell Pow", "Spow", "", -1000, 1000, AttributeDefinitionType.Derived_Percent, new AttributeCalculation(
                     new AttributeModifier(AttributeModifierType.Base_Attribute, (int)BaseAttribute.Intellect),
-                    new AttributeModifier(AttributeModifierType.Value, 12), null,
-                    AttributeCalculationOpperator.Subtract,
-                    AttributeCalculationOpperator.None));
-            derivedAttributeDefinitions.Add(dA);
-
-            dA = new AttributeDefinition("Spell Modifier", "Spell Mod", "Mmod", "", -1000, 1000, AttributeDefinitionType.Derived_Percent, new AttributeCalculation(
-                    new AttributeModifier(AttributeModifierType.Base_Attribute, (int)BaseAttribute.Memory),
-                    new AttributeModifier(AttributeModifierType.Value, 12), null,
-                    AttributeCalculationOpperator.Subtract,
+                    new AttributeModifier(AttributeModifierType.Base_Attribute, (int)BaseAttribute.Memory), null,
+                    AttributeCalculationOpperator.Add,
                     AttributeCalculationOpperator.None));
             derivedAttributeDefinitions.Add(dA);
 
@@ -2073,12 +2065,6 @@ namespace Descension.Core
 
             dA = new AttributeDefinition("Critical Hit", "Crit", "CH", "", 75, 99, AttributeDefinitionType.Derived_Score, new AttributeCalculation(
                     new AttributeModifier(AttributeModifierType.Value, 90), null, null,
-                    AttributeCalculationOpperator.None,
-                    AttributeCalculationOpperator.None));
-            derivedAttributeDefinitions.Add(dA);
-
-            dA = new AttributeDefinition("Perfect Hit", "Perfect", "PH", "", 75, 99, AttributeDefinitionType.Derived_Score, new AttributeCalculation(
-                    new AttributeModifier(AttributeModifierType.Value, 100), null, null,
                     AttributeCalculationOpperator.None,
                     AttributeCalculationOpperator.None));
             derivedAttributeDefinitions.Add(dA);
@@ -2251,10 +2237,6 @@ namespace Descension.Core
                  new List<AbilityUnlock> { });
             skillDefinitions.Add(skill);
 
-            skill = new SkillDefinition(SkillCategory.Magic, Skill.Research, "Researching", "Research", "Res", "", "intellect", 0, 999,
-                 new List<AbilityUnlock> { });
-            skillDefinitions.Add(skill);
-
             skill = new SkillDefinition(SkillCategory.Misc, Skill.Channeling, "Channeling", "Channel", "Cha", "", "intellect", 0, 999,
                  new List<AbilityUnlock> { });
             skillDefinitions.Add(skill);
@@ -2275,43 +2257,11 @@ namespace Descension.Core
                  new List<AbilityUnlock> { });
             skillDefinitions.Add(skill);
 
-            skill = new SkillDefinition(SkillCategory.Misc, Skill.Precision, "Precision", "Precise", "Pre", "", "senses", 0, 999,
-                 new List<AbilityUnlock> { });
-            skillDefinitions.Add(skill);
-
             skill = new SkillDefinition(SkillCategory.Misc, Skill.Devices, "Devices", "Device", "Dev", "", "dexterity", 0, 999,
                  new List<AbilityUnlock> { });
             skillDefinitions.Add(skill);
 
             skill = new SkillDefinition(SkillCategory.Misc, Skill.Persuasion, "Persuasion", "Persuade", "Pes", "", "charisma", 0, 999,
-                 new List<AbilityUnlock> { });
-            skillDefinitions.Add(skill);
-
-            skill = new SkillDefinition(SkillCategory.Misc, Skill.Poison_Crafting, "Poison Craft", "Poison", "Poi", "", "intellect", 0, 999,
-                 new List<AbilityUnlock> { });
-            skillDefinitions.Add(skill);
-
-            skill = new SkillDefinition(SkillCategory.Misc, Skill.Mining, "Mining", "Mining", "Min", "", "endurance", 0, 999,
-                 new List<AbilityUnlock> { });
-            skillDefinitions.Add(skill);
-
-            skill = new SkillDefinition(SkillCategory.Misc, Skill.Gathering, "Gathering", "Gather", "Gat", "", "senses", 0, 999,
-                 new List<AbilityUnlock> { });
-            skillDefinitions.Add(skill);
-
-            skill = new SkillDefinition(SkillCategory.Misc, Skill.Crafting, "Crafting", "Craft", "cra", "", "intellect", 0, 999,
-                 new List<AbilityUnlock> { });
-            skillDefinitions.Add(skill);
-
-            skill = new SkillDefinition(SkillCategory.Misc, Skill.Engineering, "Engineering", "Engine", "Eng", "", "intellect", 0, 999,
-                 new List<AbilityUnlock> { });
-            skillDefinitions.Add(skill);
-
-            skill = new SkillDefinition(SkillCategory.Misc, Skill.Logistics, "Logistics", "Logistics", "Log", "", "intellect", 0, 999,
-                 new List<AbilityUnlock> { });
-            skillDefinitions.Add(skill);
-
-            skill = new SkillDefinition(SkillCategory.Misc, Skill.Steamcraft, "Steamcraft", "Steam", "Ste", "", "intellect", 0, 999,
                  new List<AbilityUnlock> { });
             skillDefinitions.Add(skill);
 

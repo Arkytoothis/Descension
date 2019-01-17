@@ -1,0 +1,4 @@
+mail: info@epiccube.org
+package site: http://www.epiccube.org/cromos-color-animations-outline-unity-3d/ 
+Epic Cube Site: http://www.epiccube.org 
+If you appreciated our work, please rate this package on Unity Asset Store: http://u3d.as/Bmr 

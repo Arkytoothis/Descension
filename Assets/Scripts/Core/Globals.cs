@@ -30,7 +30,7 @@ namespace Descension.Core
     public enum DerivedAttribute
     {
         Actions, Armor, Health, Stamina, Essence, Morale,
-        Might_Attack, Might_Damage, Finesse_Attack, Finesse_Damage, Spell_Attack, Spell_Damage, Spell_Modifier,
+        Might_Attack, Might_Damage, Finesse_Attack, Finesse_Damage, Spell_Attack, Spell_Power,
         Block, Dodge, Parry, Resistance, Initiative, Perception, Concentration,
         Bonus_Actions, Duration_Modifier, Range_Modifier, 
         Fumble, Critical_Strike, Critical_Damage,
@@ -55,15 +55,9 @@ namespace Descension.Core
         One_Hand_Melee, Two_hand_Melee, Polearms, Unarmed, Thrown, Archery, Firearms, Explosives,
         Light_Armor, Medium_Armor, Heavy_Armor, Bucklers, Shields, Leadership, Tactics,
         Fire_Magic, Air_Magic, Water_Magic, Earth_Magic, Death_Magic, Life_Magic, Shadow_Magic, Arcane_Magic,
-        Alchemy, Enchanting, Lore, Research, Channeling,
-        Stealth, Scouting, Tricks, Evasion, Precision, Devices, Persuasion, Poison_Crafting,
-        Mining, Gathering, Crafting, Engineering, Logistics, Steamcraft, Survival, Navigation, Training, Medicine,
-        Number, None
-    }
-
-    public enum PartyAttribute
-    {
-        March_Speed, Detection_Range, Supplies, Supplies_Used, Max_Supplies, Rations, Rations_Used, Max_Rations,
+        Alchemy, Enchanting, Lore, Channeling,
+        Stealth, Scouting, Tricks, Evasion, Devices, Persuasion,
+        Survival, Navigation, Training, Medicine,
         Number, None
     }
 
@@ -156,8 +150,8 @@ namespace Descension.Core
 
     public enum CharacterRenderSlot
     {
-        Right_Hand, Left_Hand, Body, Head, Right_Shoulder, Left_Shoulder, Right_Glove, Left_Glove,
-        Right_Foot, Left_Foot, Back, Neck, Waist, Hip, Right_Finger, Left_Finger, Hair, Beard, Face, Left_Wrist, Right_Wrist, Ammo,
+        Right_Hand, Left_Hand, Ammo, Head, Body, Right_Shoulder, Left_Shoulder, Left_Wrist, Right_Wrist, Right_Glove, Left_Glove,
+        Right_Foot, Left_Foot, Back, Neck, Waist, Hip, Right_Finger, Left_Finger, Hair, Beard, Face, 
         Number, None
     }
 
@@ -232,15 +226,35 @@ namespace Descension.Core
         North, North_East, East, South_East, South, South_West, West, North_West, Center
     };
 
-    public enum GameEventType
+    public enum QuestType
     {
         Story, Lore, Quest, Battle, Conquest, Defense, Siege, Rescue, Rumor, Merchant, Puzzle, Tutorial,
         Number, Blank
     };
 
-    public enum EventDifficulty
+    public enum QuestDifficulty
     {
         Very_Easy, Easy, Average, Hard, Very_Hard, Impossible, Number, None
+    };
+
+    public enum AdventureTheme
+    {
+        Bandits, Undead, Goblinoids, Animals, 
+        Number, None
+    };
+
+    public enum AdventureLocationType
+    {
+       Forest, Swamp, Desert, Tundra, Mountians, 
+       Village, Town, Ruins, Camp,
+       Dungeon, Tomb, Cavern, Mine, Hive, 
+       Number, None
+    };
+
+    public enum WeatherType
+    {
+        Rain, Wind, Storm, Snow, Blizzard, Fog,
+        Number, None
     };
 
     public enum EventState
@@ -298,19 +312,6 @@ namespace Descension.Core
         Always_On, Use, Cast, Channel, On_Attack, On_Damage, On_Miss, On_Defense, On_Dodge, On_Block, On_Damaged,
         Number, None
     }
-    public enum ResearchCategory
-    {
-        Stronghold, Library, Stockpile, Armory, Barracks, Codex, Combat, Magic,
-        Number, None
-    }
-
-    public enum EntryUnlockType
-    {
-        Power, Spell, Trait, Building, Item_Material, Item, Item_Enchantment, Profession, Race,
-        None
-    }
-
-    public enum ResearchStatus { Active, Deactive, Researched, Researching };
 
     public enum RewardType
     {

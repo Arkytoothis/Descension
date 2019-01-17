@@ -20,7 +20,7 @@ namespace Descension.Characters
 
         static bool initialized = false;
 
-        //static bool ignoreUnlocks = false;
+        static bool ignoreUnlocks = false;
 
         public static void Initialize()
         {
@@ -33,18 +33,19 @@ namespace Descension.Characters
 
                 foreach (KeyValuePair<string, Race> kvp in Database.Races)
                 {
-                    //if (ignoreUnlocks == true || PlayerManager.Instance.RacesUnlocked[kvp.Key] == true)
-                    //{
-                    //    availableRaces.Add(kvp.Key);
-                    //}
+                    //Debug.Log(kvp.Key);
+                    if (ignoreUnlocks == true || TownManager.instance.IsRaceUnlocked(kvp.Key) == true)
+                    {
+                        availableRaces.Add(kvp.Key);
+                    }
                 }
 
                 foreach (KeyValuePair<string, Profession> kvp in Database.Professions)
                 {
-                    //if (ignoreUnlocks == true || PlayerManager.Instance.ProfessionsUnlocked[kvp.Key] == true)
-                    //{
-                    //    availableProfessions.Add(kvp.Key);
-                    //}
+                    if (ignoreUnlocks == true || TownManager.instance.IsProfessionUnlocked(kvp.Key) == true)
+                    {
+                        availableProfessions.Add(kvp.Key);
+                    }
                 }
 
                 positiveQuirks = new List<string>();

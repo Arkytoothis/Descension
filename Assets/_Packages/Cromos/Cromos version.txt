@@ -1,0 +1,81 @@
+CROMOS - outline and color animations changelog 
+
+version 1.8.0
+-- HIGHLIGHTER --
+CHANGE: now Highlighter does not require ColorTransition compoenent to work. If a ColorTransition component is present on the same object, the highlighting effect will be mixed to color transitions of ColorTransition componenent
+ADD: static Highlight and DeHighlight method
+
+-- EDITOR -- 
+FIX: now in Highlighter editor mix mode is shown only if Mode is set to Color or ColorsAndOutline
+
+-- OUTLINE -- 
+CHANGE: in order to use outline features, it is no longer necessary to add "outline" layer to tags and layers of the project
+CHANGE: brand new design for outline system to make it simpler to be used. It's now possible add, remove, enable and disable OutlineTarget compoenent (runtime and editor) to make OutlineTarget component work. It's however possible to control it through Highlighter component (recommended)
+OPTIMIZATION: now post-processing involves only a portion of the screen (depending from objects in screen space)
+
+
+version 1.7.6
+-- COLOR TRANSITION --
+ADD: color animation extended meshes with multiple materials
+
+-- GLOBAL --
+ADD: new startup mode OnEnable for property animators
+FIX: minor performance issues
+other minor changes
+
+---------------------------------------------------------------------------------------------------
+
+version 1.7.5
+-- OUTLINE --
+FIX: outline did not work properly on some mobile hardware
+
+---------------------------------------------------------------------------------------------------
+
+version 1.7.4
+-- OUTLINE --
+FIX: an error occurred when multiple outline effects where enabled and then disabled
+
+---------------------------------------------------------------------------------------------------
+
+version 1.7.3
+-- OUTLINE --
+FIX: performance optimization. In some cases garbage was produced
+
+---------------------------------------------------------------------------------------------------
+
+version 1.7.2
+-- OUTLINE -- 
+FIX: fixed issue Accurate Glow
+
+-- COLOR ANIMATORS --
+FIX: in some cases a compiling error about Gradient component occurred
+
+---------------------------------------------------------------------------------------------------
+
+version 1.7.1
+-- OUTLINE --
+ADD/FIX: now Outline Target support LOD groups: only the renderers of the current LOD are outlined
+FIX: now outline works correctly with skinned meshe renderers with multiple sub-meshes
+-- GLOBAL --
+ADD: now Color Transition and Highlighter components can use shared materials instead of instanced materials
+ADD: now it's possible to exclude particle system renderers from color transitions, highlighting and outline
+
+---------------------------------------------------------------------------------------------------
+
+version 1.7.0
+-- OUTLINE --
+PERFORMANCE: Outline system optimized to work with single render camera + command  buffer. It provides better performance.
+ADD: 2 new outline modes added: Fast Solid and Fast Glow, optimized for mobile and low-end devices. Previous outline modes are now called Accurate Solid and Accurate Glow, optimized for PC and other mid/high-end devices.
+ADD: It is now possible to switch outline between single game object and whole hierarchy
+FIX: in some cases the rendered image of outlined object was vertically flipped
+
+-- GLOBAL -- 
+ADD: new After Transition Actions in Property Animator: DeactivateGameObject (formerly Deactivate), DestroyGameObject (formerly Destroy), DisableComponent, DestroyComponent)
+CHANGE: PropertyAnimatorEvent moved to a new file
+
+-- FULLSCREEN FADE -- 
+FIX: now in FullscreenFade the fade sphere size is automatically computed correctly
+
+---------------------------------------------------------------------------------------------------
+
+previous version: 1.6.6

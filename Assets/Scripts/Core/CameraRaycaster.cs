@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Descension.Characters;
-#pragma warning disable 0414
-namespace Descension.Core
+
+//#pragma warning disable 0414
+namespace Descension
 {
     public class CameraRaycaster : MonoBehaviour
     {
+        public enum Mode { Town, Adventure };
+
         [SerializeField] Texture2D moveCursor = null;
         [SerializeField] Texture2D interactCursor = null;
-        [SerializeField] Texture2D transitionCursor = null;
-        [SerializeField] Texture2D meleeCursor = null;
-        [SerializeField] Texture2D rangedCursor = null;
-        [SerializeField] Texture2D powerCursor = null;
-        [SerializeField] Texture2D spellCursor = null;
+        //[SerializeField] Texture2D transitionCursor = null;
+        //[SerializeField] Texture2D meleeCursor = null;
+        //[SerializeField] Texture2D rangedCursor = null;
+        //[SerializeField] Texture2D powerCursor = null;
+        //[SerializeField] Texture2D spellCursor = null;
         [SerializeField] Texture2D guiCursor = null;
         [SerializeField] Texture2D errorCursor = null;
 
@@ -32,16 +35,38 @@ namespace Descension.Core
         const int WALKABLE_LAYER_NUMBER = 8;
         const int OBSTACLE_LAYER_NUMBER = 10;
 
+        bool raycastingEnabled = true;
+
         void Update()
         {
-            if (EventSystem.current.IsPointerOverGameObject() == true)
+            if (raycastingEnabled == true)
             {
-                Cursor.SetCursor(guiCursor, hotspot, CursorMode.Auto);
-                return;
+                if (EventSystem.current.IsPointerOverGameObject() == true)
+                {
+                    Cursor.SetCursor(guiCursor, hotspot, CursorMode.Auto);
+                    return;
+                }
+                else
+                {
+                    PerformRaycasts();
+                }
             }
-            else
+        }
+
+        public void SetMode(Mode mode)
+        {
+            switch (mode)
             {
-                PerformRaycasts();
+                case Mode.Town:
+                    Cursor.SetCursor(guiCursor, hotspot, CursorMode.Auto);
+                    raycastingEnabled = false;
+                    break;
+                case Mode.Adventure:
+                    Cursor.SetCursor(errorCursor, hotspot, CursorMode.Auto);
+                    raycastingEnabled = true;
+                    break;
+                default:
+                    break;
             }
         }
 
@@ -79,25 +104,24 @@ namespace Descension.Core
 
         bool RaycastForInteraction(Ray ray)
         {
-            //RaycastHit hit;
+            RaycastHit hit;
 
-            //if (Physics.Raycast(ray, out hit, 1000))
-            //{
-            //    Interactable interactable = hit.collider.gameObject.GetComponent<Interactable>();
+            if (Physics.Raycast(ray, out hit, 1000))
+            {
+                Interactable interactable = hit.collider.gameObject.GetComponentInParent<Interactable>();
 
-            //    if (interactable != null)
-            //    {
-            //        if(interactable is Transition == true)
-            //            Cursor.SetCursor(transitionCursor, hotspot, CursorMode.Auto);
-            //        else
-            //            Cursor.SetCursor(interactCursor, hotspot, CursorMode.Auto);
+                if (interactable != null)
+                {
+                    Cursor.SetCursor(interactCursor, hotspot, CursorMode.Auto);
 
-            //        if(onMouseOverInteractable != null)
-            //            onMouseOverInteractable(interactable.gameObject);
+                    if (onMouseOverInteractable != null)
+                    {
+                        onMouseOverInteractable(interactable.gameObject);
+                    }
 
-            //        return true;
-            //    }
-            //}
+                    return true;
+                }
+            }
 
             return false;
         }
@@ -146,4 +170,3 @@ namespace Descension.Core
         }
     }
 }
-#pragma warning restore 0649

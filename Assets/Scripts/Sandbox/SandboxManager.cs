@@ -12,6 +12,8 @@ namespace Descension
 {
     public class SandboxManager : Singleton<SandboxManager>
     {
+        [SerializeField] SandboxGuiManager guiManager = null;
+
         private void Awake()
         {
             Reload();
@@ -29,9 +31,18 @@ namespace Descension
             PcGenerator.Initialize();
 
             ModelManager.instance.Initialize();
-            PlayerManager.instance.Initialize();
+
+            guiManager.Initialize();
 
             return null;
+        }
+
+        public void Enable()
+        {
+        }
+
+        public void Disable()
+        {
         }
     }
 }
