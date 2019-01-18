@@ -13,7 +13,15 @@ namespace Descension
     public class AdventureManager : Singleton<AdventureManager>
     {
         [SerializeField] AdventureGuiManager guiManager = null;
-        [SerializeField] PlayerManagerTown playerManager = null;
+        [SerializeField] PcManager pcManager = null;
+
+        [SerializeField] Quest currentQuest = null;
+        public Quest CurrentQuest { get { return currentQuest; } }
+
+        [SerializeField] Adventure adventure = null;
+        public Adventure Adventure { get { return adventure; } }
+
+        [SerializeField] PlayerSpawner playerSpawner = null;
 
         private void Awake()
         {
@@ -27,26 +35,45 @@ namespace Descension
 
         IEnumerator Initialize()
         {
+            //Debug.Log("AdventureManager.Initialize()");
             Database.Initialize();
             ItemGenerator.Initialize();
             PcGenerator.Initialize();
             ModelManager.instance.Initialize();
 
-            playerManager.Initialize();
-            guiManager.Initialize();
+            Load();
+            pcManager.Initialize();
+            guiManager.Initialize(currentQuest);
 
             return null;
         }
 
-        public void Setup()
+        public void SetupPlayerSpawner()
         {
+            playerSpawner = FindObjectOfType<PlayerSpawner>();
+            playerSpawner.SpawnPlayer();
         }
 
-        public void Enable()
+        public void Save()
         {
+            string dataAsJson = JsonUtility.ToJson(currentQuest);
+            string filePath = Database.DataPath + "current_quest.json";
+            File.WriteAllText(filePath, dataAsJson);
         }
 
-        public void Disable()
+        public void Load()
+        {
+            string filePath = Database.DataPath + "current_quest.json";
+
+            if (File.Exists(filePath))
+            {
+                string dataAsJson = File.ReadAllText(filePath);
+                currentQuest = JsonUtility.FromJson<Quest>(dataAsJson);
+                //Debug.Log(currentQuest.Name + " loaded");
+            }
+        }
+
+        public void LoadAdventure()
         {
         }
     }

@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e228b45736a8cf4ea000616e628a4dd, type: 3}
+  m_Name: Default DungeonFlow
+  m_EditorClassIdentifier: 
+  Length:
+    Min: 5
+    Max: 10
+  GlobalPropGroupIDs: 
+  GlobalPropRanges: []
+  KeyManager: {fileID: 0}
+  DoorwayConnectionChance: 0
+  TileInjectionRules: []
+  Nodes:
+  - Graph: {fileID: 11400000}
+    TileSets:
+    - {fileID: 11400000, guid: af54e18af381d7c41ab0c42c74e0e1e9, type: 2}
+    NodeType: 1
+    Position: 0
+    Label: Start
+    Keys: []
+    Locks: []
+    LockPlacement: 0
+  - Graph: {fileID: 11400000}
+    TileSets:
+    - {fileID: 11400000, guid: 15d906a323e781842addac8570bb1ad9, type: 2}
+    NodeType: 2
+    Position: 1
+    Label: Goal
+    Keys: []
+    Locks: []
+    LockPlacement: 0
+  - Graph: {fileID: 11400000}
+    TileSets:
+    - {fileID: 11400000, guid: 1c37fd05fc0744843b616b83bbbaf604, type: 2}
+    NodeType: 0
+    Position: 0.34715027
+    Label: Mini Boss
+    Keys: []
+    Locks: []
+    LockPlacement: 0
+  - Graph: {fileID: 11400000}
+    TileSets:
+    - {fileID: 11400000, guid: fffe1d59fb4b58a4c839149da0f4355e, type: 2}
+    NodeType: 0
+    Position: 0.88255614
+    Label: Boss
+    Keys: []
+    Locks: []
+    LockPlacement: 0
+  Lines:
+  - Graph: {fileID: 11400000}
+    DungeonArchetypes:
+    - {fileID: 11400000, guid: 05f4938da3987b542950d2c52576878f, type: 2}
+    Position: 0
+    Length: 0.4041451
+    Keys: []
+    Locks: []
+  - Graph: {fileID: 11400000}
+    DungeonArchetypes:
+    - {fileID: 11400000, guid: 05f4938da3987b542950d2c52576878f, type: 2}
+    Position: 0.4041451
+    Length: 0.5958549
+    Keys: []
+    Locks: []

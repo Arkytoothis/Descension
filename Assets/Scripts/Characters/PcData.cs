@@ -15,6 +15,17 @@ namespace Descension.Characters
     }
 
     [System.Serializable]
+    public class PcDataList
+    {
+        public List<PcData> Pcs;
+
+        public PcDataList()
+        {
+            Pcs = new List<PcData>();
+        }
+    }
+
+    [System.Serializable]
     public class PcData : CharacterData
     {
         [SerializeField] UpkeepData upkeep;

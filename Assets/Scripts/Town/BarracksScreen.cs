@@ -21,7 +21,7 @@ namespace Descension
         public void SetupPcList()
         {
             int index = 0;
-            foreach (PcData pc in TownManager.instance.PlayerManager.PcDataList)
+            foreach (PcData pc in TownManager.instance.PcManager.PcDataList)
             {
                 GameObject go = Instantiate(pcListElementPrefab, pcListElementsParent);
                 go.name = pc.Name.ShortName;

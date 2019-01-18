@@ -37,35 +37,31 @@ namespace Descension
             }
             else if (type == QuestType.Lore)
             {
-                name = "Lore Event";
+                name = "Lore Quest";
             }
             else if (type == QuestType.Merchant)
             {
-                name = "Merchant Event";
+                name = "Merchant Quest";
             }
             else if (type == QuestType.Puzzle)
             {
-                name = "Puzzle Event";
-            }
-            else if (type == QuestType.Quest)
-            {
-                name = "Quest Event";
+                name = "Puzzle Quest";
             }
             else if (type == QuestType.Rescue)
             {
-                name = "Rescue Event";
+                name = "Rescue Quest";
             }
             else if (type == QuestType.Rumor)
             {
-                name = "Rumor Event";
+                name = "Rumor Quest";
             }
             else if (type == QuestType.Story)
             {
-                name = "Story Event";
+                name = "Story Quest";
             }
             else if (type == QuestType.Tutorial)
             {
-                name = "Tutorial Event";
+                name = "Tutorial Quest";
             }
 
             return name;

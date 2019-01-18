@@ -52,7 +52,7 @@ namespace Descension.Core
                             _instance = singleton.AddComponent<T>();
                             singleton.name = "(singleton) " + typeof(T).ToString();
 
-                            DontDestroyOnLoad(singleton);
+                            //DontDestroyOnLoad(singleton);
 
                             if (verbose == true)
                                 Debug.Log("[Singleton] An instance of " + typeof(T) +

@@ -33,19 +33,12 @@ namespace Descension.Characters
 
                 foreach (KeyValuePair<string, Race> kvp in Database.Races)
                 {
-                    //Debug.Log(kvp.Key);
-                    if (ignoreUnlocks == true || TownManager.instance.IsRaceUnlocked(kvp.Key) == true)
-                    {
-                        availableRaces.Add(kvp.Key);
-                    }
+                    availableRaces.Add(kvp.Key);
                 }
 
                 foreach (KeyValuePair<string, Profession> kvp in Database.Professions)
                 {
-                    if (ignoreUnlocks == true || TownManager.instance.IsProfessionUnlocked(kvp.Key) == true)
-                    {
-                        availableProfessions.Add(kvp.Key);
-                    }
+                    availableProfessions.Add(kvp.Key);
                 }
 
                 positiveQuirks = new List<string>();

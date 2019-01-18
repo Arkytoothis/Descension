@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Descension
@@ -13,8 +14,8 @@ namespace Descension
     public class TownManager : Singleton<TownManager>
     {
         [SerializeField] TownGuiManager guiManager = null;
-        [SerializeField] PlayerManagerTown playerManager = null;
-        public PlayerManagerTown PlayerManager { get { return playerManager; } }
+        [SerializeField] PcManager pcManager = null;
+        public PcManager PcManager { get { return pcManager; } }
 
         [SerializeField] QuestManager questManager = null;
         public QuestManager QuestManager { get { return questManager; } }
@@ -25,7 +26,7 @@ namespace Descension
         public Dictionary<string, bool> professionsUnlocked = new Dictionary<string, bool>();
 
         private void Awake()
-        {
+        {            
             Reload();
         }
 
@@ -36,6 +37,7 @@ namespace Descension
 
         IEnumerator Initialize()
         {
+            Debug.Log("TownManager.Initialize()");
             Database.Initialize();
             LoadUnlocks();
 
@@ -45,22 +47,13 @@ namespace Descension
 
             ModelManager.instance.Initialize();
 
-            playerManager.Initialize();
+            pcManager.Initialize();
             questManager.Initialize();
 
             guiManager.Initialize(buildingObjects);
 
             return null;
         }
-
-        public void Enable()
-        {
-        }
-
-        public void Disable()
-        {
-        }
-
 
         private void LoadUnlocks()
         {
@@ -111,6 +104,13 @@ namespace Descension
             }
 
             return unlocked;
+        }
+
+        public void StartAdventure()
+        {
+            pcManager.Save();
+            questManager.Save();
+            SceneManager.LoadSceneAsync(2);
         }
     }
 }

@@ -31,6 +31,10 @@ namespace Descension.Characters
         [SerializeField] protected bool isDrained = false;
         [SerializeField] protected bool isBroken = false;
 
+        protected CharacterData()
+        {
+        }
+
         public FantasyName Name { get { return name; } }
         public Gender Gender { get { return gender; } }
         public Background Background { get { return background; } set { background = value; } }

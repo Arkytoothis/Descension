@@ -766,7 +766,7 @@ namespace Pathfinding {
 			}
 
 			if (result.Count == 0) {
-				Debug.LogWarning("No MeshFilters were found contained in the layers specified by the 'mask' variables");
+				//Debug.LogWarning("No MeshFilters were found contained in the layers specified by the 'mask' variables");
 			}
 
 			Profiler.EndSample();

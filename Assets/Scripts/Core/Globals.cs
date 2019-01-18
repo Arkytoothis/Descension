@@ -228,7 +228,7 @@ namespace Descension.Core
 
     public enum QuestType
     {
-        Story, Lore, Quest, Battle, Conquest, Defense, Siege, Rescue, Rumor, Merchant, Puzzle, Tutorial,
+        Story, Lore, Battle, Conquest, Defense, Siege, Rescue, Rumor, Merchant, Puzzle, Tutorial,
         Number, Blank
     };
 
@@ -237,13 +237,13 @@ namespace Descension.Core
         Very_Easy, Easy, Average, Hard, Very_Hard, Impossible, Number, None
     };
 
-    public enum AdventureTheme
+    public enum MapTheme
     {
         Bandits, Undead, Goblinoids, Animals, 
         Number, None
     };
 
-    public enum AdventureLocationType
+    public enum MapLocation
     {
        Forest, Swamp, Desert, Tundra, Mountians, 
        Village, Town, Ruins, Camp,
@@ -251,9 +251,15 @@ namespace Descension.Core
        Number, None
     };
 
-    public enum WeatherType
+    public enum MapWeather
     {
         Rain, Wind, Storm, Snow, Blizzard, Fog,
+        Number, None
+    };
+
+    public enum MapType
+    {
+        Outdoors, Indoors, Underground, Underwater,
         Number, None
     };
 

@@ -14,7 +14,6 @@ namespace Descension
             if (initialized == false)
             {
                 initialized = true;
-
             }
         }
 
@@ -28,7 +27,8 @@ namespace Descension
             int gold = Random.Range(10, 100);
             int exp = Random.Range(10, 100);
 
-            Quest quest = new Quest(name, description, type, gold, exp);
+            MapData mapData = new MapData(MapGenerator.Generate());
+            Quest quest = new Quest(name, description, type, difficulty, rarity, gold, exp, mapData);
 
             return quest;
         }

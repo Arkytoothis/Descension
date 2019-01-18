@@ -36,7 +36,7 @@ namespace Descension
             }
             else if (type == QuestType.Lore)
             {
-                description = "Lore Event";
+                description = "Lore Quest";
             }
             else if (type == QuestType.Merchant)
             {
@@ -45,11 +45,7 @@ namespace Descension
             }
             else if (type == QuestType.Puzzle)
             {
-                description = "Puzzle Event";
-            }
-            else if (type == QuestType.Quest)
-            {
-                description = "Quest Event";
+                description = "Puzzle Quest";
             }
             else if (type == QuestType.Rescue)
             {
@@ -63,11 +59,11 @@ namespace Descension
             }
             else if (type == QuestType.Story)
             {
-                description = "Story Event";
+                description = "Story Quest";
             }
             else if (type == QuestType.Tutorial)
             {
-                description = "Tutorial Event";
+                description = "Tutorial Quest";
             }
 
             return description;
