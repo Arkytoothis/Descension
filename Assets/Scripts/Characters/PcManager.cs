@@ -7,12 +7,29 @@ using UnityEngine;
 
 namespace Descension
 {
-    public class PcManager : MonoBehaviour
+    public class PcManager : Singleton<PcManager>
     {
         [SerializeField] List<PcData> pcDataList = new List<PcData>();
         public List<PcData> PcDataList { get { return pcDataList; } }
 
+        [SerializeField] PartyData partyData = null;
+        public PartyData PartyData { get { return partyData; } }
+
+        [SerializeField] List<GameObject> pcObjects = new List<GameObject>();
+        public List<GameObject> PcObjects { get { return pcObjects; } set { pcObjects = value; } }
+
+        [SerializeField] int partySize = 0;
+        public int PartySize { get { return partySize; } }
+
+        [SerializeField] int selectedPcIndex = -1;
+        public int SelectedPcIndex { get { return selectedPcIndex; } }
+
         private bool initialized = false;
+
+        private void Awake()
+        {
+            Reload();
+        }
 
         public void Initialize()
         {
@@ -20,20 +37,31 @@ namespace Descension
             {
                 initialized = true;
 
-                Load();
-                //GeneratePcData();
-                //Save();
+                partyData = new PartyData(4);
+                pcDataList = new List<PcData>();
+                pcObjects = new List<GameObject>();
             }
         }
 
-        public void GeneratePcData()
+        public void Generate()
+        {
+            GeneratePcData();
+            Save();
+        }
+
+        private void GeneratePcData()
         {
             pcDataList.Add(PcGenerator.Generate(pcDataList.Count, Gender.Male, "Imperial", "Soldier"));
-            pcDataList.Add(PcGenerator.Generate(pcDataList.Count, Gender.Female, "", ""));
-            pcDataList.Add(PcGenerator.Generate(pcDataList.Count, Gender.Female, "", ""));
-            pcDataList.Add(PcGenerator.Generate(pcDataList.Count, Gender.Male, "", ""));
-            pcDataList.Add(PcGenerator.Generate(pcDataList.Count, Gender.Female, "", ""));
-            pcDataList.Add(PcGenerator.Generate(pcDataList.Count, Gender.Male, "", ""));
+            pcDataList.Add(PcGenerator.Generate(pcDataList.Count, Gender.Female, "", "Scout"));
+            pcDataList.Add(PcGenerator.Generate(pcDataList.Count, Gender.Female, "", "Priest"));
+            pcDataList.Add(PcGenerator.Generate(pcDataList.Count, Gender.Male, "", "Apprentice"));
+            pcDataList.Add(PcGenerator.Generate(pcDataList.Count, Gender.Female, "", "Rogue"));
+            pcDataList.Add(PcGenerator.Generate(pcDataList.Count, Gender.Male, "", "Citizen"));
+
+            for (int i = 0; i < 4; i++)
+            {
+                pcDataList.Add(PcGenerator.Generate(pcDataList.Count, Gender.None, "", ""));
+            }
         }
 
         public void Save()
@@ -73,6 +101,79 @@ namespace Descension
                 {
                     pcDataList.Add(pc);
                 }
+            }
+        }
+
+        public void AddToParty(int index)
+        {
+            pcDataList[index].PartyIndex = partySize;
+            partySize++;
+        }
+
+        public void RemoveFromParty(int index)
+        {
+            pcDataList[index].PartyIndex = -1;
+            partySize--;
+        }
+
+        public void SetupParty()
+        {
+
+            for (int i = 0; i < pcDataList.Count; i++)
+            {
+                if (pcDataList[i].PartyIndex != -1)
+                {
+                    partyData.AddPc(pcDataList[i]);
+                    partyData.Pcs[pcDataList[i].PartyIndex].PartyIndex = i;
+                }
+            }
+
+            partySize = partyData.Pcs.Count;
+        }
+
+        public void AddPcObject(GameObject pcObject)
+        {
+            pcObjects.Add(pcObject);
+        }
+
+        public void SelectPc(int index)
+        {
+            selectedPcIndex = index;
+        }
+
+        public GameObject GetSelectedPcObject()
+        {
+            if (selectedPcIndex != -1)
+            {
+                return pcObjects[selectedPcIndex];
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public PcData GetSelectedPc()
+        {
+            if (selectedPcIndex != -1)
+            {
+                return pcDataList[selectedPcIndex];
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public PcData GetSelectedPartyPc()
+        {
+            if (partyData != null && selectedPcIndex != -1)
+            {
+                return partyData.Pcs[selectedPcIndex];
+            }
+            else
+            {
+                return null;
             }
         }
     }

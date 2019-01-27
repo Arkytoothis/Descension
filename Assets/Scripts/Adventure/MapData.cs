@@ -9,18 +9,27 @@ namespace Descension
     public class MapData
     {
         [SerializeField] float timeOfDay;
+        public float TimeOfDay { get { return timeOfDay; } }
+
         [SerializeField] MapType mapType;
+        public MapType MapType { get { return mapType; } }
+
         [SerializeField] MapLocation mapLocation;
+        public MapLocation MapLocation { get { return mapLocation; } }
+
         [SerializeField] MapTheme mapTheme;
+        public MapTheme MapTheme { get { return mapTheme; } }
+
         [SerializeField] MapWeather mapWeather;
+        public MapWeather MapWeather { get { return mapWeather; } }
 
         public MapData()
         {
-            this.timeOfDay = 0f;
-            this.mapType = MapType.None;
-            this.mapLocation = MapLocation.None;
-            this.mapTheme = MapTheme.None;
-            this.mapWeather = MapWeather.None;
+            timeOfDay = 0f;
+            mapType = MapType.None;
+            mapLocation = MapLocation.None;
+            mapTheme = MapTheme.None;
+            mapWeather = MapWeather.None;
         }
 
         public MapData(float timeOfDay, MapType mapType, MapLocation mapLocation, MapTheme mapTheme, MapWeather mapWeather)
@@ -34,11 +43,11 @@ namespace Descension
 
         public MapData(MapData mapData)
         {
-            this.timeOfDay = mapData.timeOfDay;
-            this.mapType = mapData.mapType;
-            this.mapLocation = mapData.mapLocation;
-            this.mapTheme = mapData.mapTheme;
-            this.mapWeather = mapData.mapWeather;
+            timeOfDay = mapData.timeOfDay;
+            mapType = mapData.mapType;
+            mapLocation = mapData.mapLocation;
+            mapTheme = mapData.mapTheme;
+            mapWeather = mapData.mapWeather;
         }
 
         public string GetString()

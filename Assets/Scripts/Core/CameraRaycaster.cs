@@ -32,7 +32,10 @@ namespace Descension
         public delegate bool OnMouseOverInteractable(GameObject go);
         public event OnMouseOverInteractable onMouseOverInteractable = null;
 
-        const int WALKABLE_LAYER_NUMBER = 8;
+        public delegate bool OnMouseOverObstacle(RaycastHit hit);
+        public event OnMouseOverObstacle onMouseOverObstacle = null;
+
+        const int WALKABLE_LAYER_NUMBER = 9;
         const int OBSTACLE_LAYER_NUMBER = 10;
 
         bool raycastingEnabled = true;
@@ -135,6 +138,10 @@ namespace Descension
             if (obstacle == true)
             {
                 Cursor.SetCursor(errorCursor, hotspot, CursorMode.Auto);
+
+                if (onMouseOverObstacle != null)
+                    onMouseOverObstacle(hit);
+
                 return true;
             }
             else

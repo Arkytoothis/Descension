@@ -732,49 +732,49 @@ namespace Descension.Core
 
         static void LoadItems()
         {
-            ItemDefinition item = new ItemDefinition("Knife", "Knife", "knife", "knife", "knife", EquipmentSlot.Right_Hand, 10, 1, 10, 1, 3,
+            ItemDefinition item = new ItemDefinition("Knife", "Knife", "Knife", "Knife", "Knife", EquipmentSlot.Right_Hand, 10, 1, 10, 1, 3,
                 ItemType.Weapon, ItemHardnessAllowed.Soft_or_Hard, ItemNameFormat.Material_First,
                 new WeaponData(WeaponType.One_Handed_Melee, AmmoType.None, AttackType.Finesse, WeaponGripType.Either_Hand, 15, 1, 5, 5,
                 new List<DamageData> { new DamageData(DamageType.Physical, (int)DerivedAttribute.Health, new GameValue(1, 4), GameValue.Zero, 0, 0) }, "", "", "", "", ""),
                 null, null, null, null, null, new Vector3(0, 0, 0), new Vector3(0, 0, 0), new Vector3(-8.696f, 4.995f, -179.488f), new Vector3(0.156f, 0.052f, -0.033f), "");
             itemDefinitions.Add(item.Key, item);
 
-            item = new ItemDefinition("Short Sword", "Short Sword", "short sword", "short sword", "short sword", EquipmentSlot.Right_Hand, 10, 1, 10, 1, 4,
+            item = new ItemDefinition("Short Sword", "Short Sword", "Short Sword", "Short Sword", "Short Sword", EquipmentSlot.Right_Hand, 10, 1, 10, 1, 4,
                 ItemType.Weapon, ItemHardnessAllowed.Soft_or_Hard, ItemNameFormat.Material_First,
                 new WeaponData(WeaponType.One_Handed_Melee, AmmoType.None, AttackType.Finesse, WeaponGripType.Right_Hand, 15, 1, 7, 5,
                 new List<DamageData> { new DamageData(DamageType.Physical, (int)DerivedAttribute.Health, new GameValue(1, 4), GameValue.Zero, 0, 0) }, "", "", "", "", ""),
                 null, null, null, null, null, new Vector3(0, 0, 0), new Vector3(0, 0, 0), new Vector3(7.232f, -9.425f, 171.125f), new Vector3(0.064f, 0.084f, 0.031f), "");
             itemDefinitions.Add(item.Key, item);
 
-            item = new ItemDefinition("Short Bow", "Short Bow", "short bow", "short bow", "short bow", EquipmentSlot.Right_Hand, 10, 1, 10, 1, 8,
+            item = new ItemDefinition("Short Bow", "Short Bow", "Short Bow", "Short Bow", "Short Bow", EquipmentSlot.Right_Hand, 10, 1, 10, 1, 8,
                 ItemType.Weapon, ItemHardnessAllowed.Soft_or_Hard, ItemNameFormat.Material_First,
                 new WeaponData(WeaponType.One_Handed_Melee, AmmoType.None, AttackType.Finesse, WeaponGripType.Both_Hands, 15, 5, 5, 5,
                 new List<DamageData> { new DamageData(DamageType.Physical, (int)DerivedAttribute.Health, new GameValue(1, 4), GameValue.Zero, 0, 0) }, "", "", "", "", ""),
                 null, null, null, null, null, new Vector3(0, 0, 0), new Vector3(0, 0, 0), new Vector3(0.0f, -195.245f, 8.925f), new Vector3(-0.003f, -0.096f, 0.0010f), "");
             itemDefinitions.Add(item.Key, item);
 
-            item = new ItemDefinition("Club", "Club", "club", "club", "club", EquipmentSlot.Right_Hand, 10, 1, 10, 1, 3,
+            item = new ItemDefinition("Club", "Club", "Club", "Club", "Club", EquipmentSlot.Right_Hand, 10, 1, 10, 1, 3,
                 ItemType.Weapon, ItemHardnessAllowed.Soft_or_Hard, ItemNameFormat.Material_First,
                 new WeaponData(WeaponType.One_Handed_Melee, AmmoType.None, AttackType.Finesse, WeaponGripType.Right_Hand, 15, 1, 5, 5,
                 new List<DamageData> { new DamageData(DamageType.Physical, (int)DerivedAttribute.Health, new GameValue(1, 4), GameValue.Zero, 0, 0) }, "", "", "", "", ""),
                 null, null, null, null, null, new Vector3(0, 0, 0), new Vector3(0, 0, 0), new Vector3(0f, 0f, -179.976f), new Vector3(0.011f, 0.045f, -0.009f), "");
             itemDefinitions.Add(item.Key, item);
 
-            item = new ItemDefinition("Staff", "Staff", "staff", "staff", "staff", EquipmentSlot.Right_Hand, 10, 1, 10, 1, 5,
+            item = new ItemDefinition("Staff", "Staff", "Staff", "Staff", "Staff", EquipmentSlot.Right_Hand, 10, 1, 10, 1, 5,
                 ItemType.Weapon, ItemHardnessAllowed.Soft_or_Hard, ItemNameFormat.Material_First,
                 new WeaponData(WeaponType.One_Handed_Melee, AmmoType.None, AttackType.Finesse, WeaponGripType.Both_Hands, 15, 5, 5, 5,
                 new List<DamageData> { new DamageData(DamageType.Physical, (int)DerivedAttribute.Health, new GameValue(1, 4), GameValue.Zero, 0, 0) }, "", "", "", "", ""),
                 null, null, null, null, null, new Vector3(0, 0, 0), new Vector3(0, 0, 0), new Vector3(0.0f, 0.0f, -189.922f), new Vector3(-0.004f, 0.08f, 0.013f), "");
             itemDefinitions.Add(item.Key, item);
 
-            item = new ItemDefinition("Mace", "Mace", "mace", "mace", "mace", EquipmentSlot.Right_Hand, 10, 1, 10, 1, 5,
+            item = new ItemDefinition("Mace", "Mace", "Mace", "Mace", "Mace", EquipmentSlot.Right_Hand, 10, 1, 10, 1, 5,
                 ItemType.Weapon, ItemHardnessAllowed.Soft_or_Hard, ItemNameFormat.Material_First,
                 new WeaponData(WeaponType.One_Handed_Melee, AmmoType.None, AttackType.Finesse, WeaponGripType.Both_Hands, 15, 5, 5, 5,
                 new List<DamageData> { new DamageData(DamageType.Physical, (int)DerivedAttribute.Health, new GameValue(1, 4), GameValue.Zero, 0, 0) }, "", "", "", "", ""),
                 null, null, null, null, null, new Vector3(0, 0, 0), new Vector3(0, 0, 0), new Vector3(0.0f, 0.0f, -189.922f), new Vector3(-0.004f, 0.08f, 0.013f), "");
             itemDefinitions.Add(item.Key, item);
 
-            item = new ItemDefinition("Buckler", "Buckler", "buckler", "buckler", "buckler", EquipmentSlot.Left_Hand, 10, 1, 10, 1, 2,
+            item = new ItemDefinition("Buckler", "Buckler", "Buckler", "Buckler", "Buckler", EquipmentSlot.Left_Hand, 10, 1, 10, 1, 2,
                 ItemType.Weapon, ItemHardnessAllowed.Soft_or_Hard, ItemNameFormat.Material_First,
                 new WeaponData(WeaponType.One_Handed_Melee, AmmoType.None, AttackType.Finesse, WeaponGripType.Both_Hands, 15, 5, 5, 5,
                 new List<DamageData> { new DamageData(DamageType.Physical, (int)DerivedAttribute.Health, new GameValue(1, 4), GameValue.Zero, 0, 0) }, "", "", "", "", ""),
@@ -783,7 +783,7 @@ namespace Descension.Core
                 null, null, null, new Vector3(0, 0, 0), new Vector3(0, 0, 0), new Vector3(122.756f, 117.561f, -1.37f), new Vector3(-0.021f, 0.014f, 0.029f), "");
             itemDefinitions.Add(item.Key, item);
 
-            item = new ItemDefinition("Small Shield", "Small Shield", "small shield", "small shield", "small shield", EquipmentSlot.Left_Hand, 10, 1, 10, 1, 5,
+            item = new ItemDefinition("Small Shield", "Small Shield", "Small Shield", "Small Shield", "Small Shield", EquipmentSlot.Left_Hand, 10, 1, 10, 1, 5,
                 ItemType.Weapon, ItemHardnessAllowed.Soft_or_Hard, ItemNameFormat.Material_First,
                 new WeaponData(WeaponType.One_Handed_Melee, AmmoType.None, AttackType.Finesse, WeaponGripType.Both_Hands, 15, 5, 5, 5,
                 new List<DamageData> { new DamageData(DamageType.Physical, (int)DerivedAttribute.Health, new GameValue(1, 4), GameValue.Zero, 0, 0) }, "", "", "", "", ""),
@@ -792,32 +792,32 @@ namespace Descension.Core
                 null, null, null, new Vector3(0, 0, 0), new Vector3(0, 0, 0), new Vector3(122.756f, 117.561f, -1.37f), new Vector3(-0.021f, 0.014f, 0.029f), "");
             itemDefinitions.Add(item.Key, item);
 
-            item = new ItemDefinition("Hat", "Hat", "hat", "hat", "hat", EquipmentSlot.Head, 10, 1, 10, 1, 0,
+            item = new ItemDefinition("Hat", "Hat", "Hat", "Hat", "Hat", EquipmentSlot.Head, 10, 1, 10, 1, 0,
                 ItemType.Weapon, ItemHardnessAllowed.Soft_or_Hard, ItemNameFormat.Material_First,
                 null, null, new WearableData(WearableType.Armor, 1, 0, 5, 0, new List<ResistanceData> { new ResistanceData(DamageType.Physical, 2) }, "", ""),
                 null, null, null, new Vector3(0, 0, 0), new Vector3(0, 0, 0), new Vector3(122.756f, 117.561f, -1.37f), new Vector3(-0.021f, 0.014f, 0.029f), "");
             itemDefinitions.Add(item.Key, item);
 
-            item = new ItemDefinition("Leather Helm", "Leather Helm", "leather helm", "leather helm", "leather helm", EquipmentSlot.Head, 10, 1, 10, 1, -1,
+            item = new ItemDefinition("Leather Helm", "Leather Helm", "Leather Helm", "Leather Helm", "Leather Helm", EquipmentSlot.Head, 10, 1, 10, 1, -1,
                 ItemType.Weapon, ItemHardnessAllowed.Soft_or_Hard, ItemNameFormat.Material_First,
                 null, null, new WearableData(WearableType.Armor, 1, 0, 5, 0, new List<ResistanceData> { new ResistanceData(DamageType.Physical, 2) }, "", ""),
                 null, null, null, new Vector3(0, 0, 0), new Vector3(0, 0, 0), new Vector3(122.756f, 117.561f, -1.37f), new Vector3(-0.021f, 0.014f, 0.029f), "");
             itemDefinitions.Add(item.Key, item);
 
-            item = new ItemDefinition("Helmet", "Helmet", "helmet", "helmet", "helmet", EquipmentSlot.Head, 10, 1, 10, 1, -2,
+            item = new ItemDefinition("Helmet", "Helmet", "Helmet", "Helmet", "Helmet", EquipmentSlot.Head, 10, 1, 10, 1, -2,
                 ItemType.Weapon, ItemHardnessAllowed.Soft_or_Hard, ItemNameFormat.Material_First,
                 null, null, new WearableData(WearableType.Armor, 1, 0, 5, 0, new List<ResistanceData> { new ResistanceData(DamageType.Physical, 2) }, "", ""),
                 null, null, null, new Vector3(0, 0, 0), new Vector3(0, 0, 0), new Vector3(122.756f, 117.561f, -1.37f), new Vector3(-0.021f, 0.014f, 0.029f), "");
             itemDefinitions.Add(item.Key, item);
 
-            item = new ItemDefinition("Small Healing Potion", "Small Healing Potion", "small healing potion", "small healing potion", "small healing potion",
+            item = new ItemDefinition("Small Healing Potion", "Small Healing Potion", "Small Healing Potion", "Small Healing Potion", "Small Healing Potion",
                 EquipmentSlot.None, 1, 2, 20, 1, 10,
                 ItemType.Accessory, ItemHardnessAllowed.Potion, ItemNameFormat.Material_First, null, null, null,
                 new AccessoryData(AccessoryType.Consumable, 5, "", "", ""), null, new UsableData(TimeType.None, 0, new List<AbilityEffect> { }), new Vector3(0, 0, 0), new Vector3(0, 0, 0),
                 new Vector3(0.0f, 0.0f, 0.0f), new Vector3(0.0f, 0.0f, 0.0f), "");
             itemDefinitions.Add(item.Key, item);
 
-            item = new ItemDefinition("Small Energy Potion", "Small Energy Potion", "small energy potion", "small energy potion", "small energy potion",
+            item = new ItemDefinition("Small Energy Potion", "Small Energy Potion", "Small Energy Potion", "Small Energy Potion", "Small Energy Potion",
                 EquipmentSlot.None, 1, 2, 20, 1, 10,
                 ItemType.Accessory, ItemHardnessAllowed.Potion, ItemNameFormat.Material_First, null, null, null,
                 new AccessoryData(AccessoryType.Consumable, 5, "", "", ""), null,
@@ -826,14 +826,14 @@ namespace Descension.Core
                 }), new Vector3(0, 0, 0), new Vector3(0, 0, 0), new Vector3(0.0f, 0.0f, 0.0f), new Vector3(0.0f, 0.0f, 0.0f), "");
             itemDefinitions.Add(item.Key, item);
 
-            item = new ItemDefinition("Apple", "Apple", "apple", "apple", "apple",
+            item = new ItemDefinition("Apple", "Apple", "Apple", "Apple", "Apple",
                 EquipmentSlot.None, 1, 2, 20, 1, 10,
                 ItemType.Accessory, ItemHardnessAllowed.Food, ItemNameFormat.Material_First, null, null, null,
                 new AccessoryData(AccessoryType.Consumable, 5, "", "", ""), null, new UsableData(TimeType.None, 0, new List<AbilityEffect> { }), new Vector3(0, 0, 0), new Vector3(0, 0, 0),
                 new Vector3(0.0f, 0.0f, 0.0f), new Vector3(0.0f, 0.0f, 0.0f), "");
             itemDefinitions.Add(item.Key, item);
 
-            item = new ItemDefinition("Water", "Water", "water", "water", "water",
+            item = new ItemDefinition("Water", "Water", "Water", "Water", "Water",
                 EquipmentSlot.None, 1, 2, 20, 1, 10,
                 ItemType.Accessory, ItemHardnessAllowed.Food, ItemNameFormat.Material_First, null, null, null,
                 new AccessoryData(AccessoryType.Consumable, 5, "", "", ""), null, new UsableData(TimeType.None, 0, new List<AbilityEffect> { }), new Vector3(0, 0, 0), new Vector3(0, 0, 0),
@@ -857,18 +857,17 @@ namespace Descension.Core
             temp.StartingItems.Add(new ItemShort("Short Sword", "Copper", "", "", ""));
             temp.StartingItems.Add(new ItemShort("Small Shield", "Wood", "", "", ""));
             temp.StartingItems.Add(new ItemShort("Helmet", "Copper", "", "", ""));
-            temp.SkillProficiencies.Add(new SkillProficiency(Skill.One_Hand_Melee, 3, 6));
+            temp.SkillProficiencies.Add(new SkillProficiency(Skill.Slashing_Weapons, 3, 6));
+            temp.SkillProficiencies.Add(new SkillProficiency(Skill.Piercing_Weapons, 2, 0));
+            temp.SkillProficiencies.Add(new SkillProficiency(Skill.Blunt_Weapons, 2, 0));
             temp.SkillProficiencies.Add(new SkillProficiency(Skill.Shields, 3, 1));
             temp.SkillProficiencies.Add(new SkillProficiency(Skill.Heavy_Armor, 3, 1));
             temp.SkillProficiencies.Add(new SkillProficiency(Skill.Leadership, 2, 1));
-            temp.SkillProficiencies.Add(new SkillProficiency(Skill.Polearms, 2, 0));
-            temp.SkillProficiencies.Add(new SkillProficiency(Skill.Two_hand_Melee, 2, 0));
             temp.SkillProficiencies.Add(new SkillProficiency(Skill.Survival, 1, 0));
-            temp.SkillProficiencies.Add(new SkillProficiency(Skill.Training, 1, 0));
             temp.SkillProficiencies.Add(new SkillProficiency(Skill.Archery, 1, 0));
             temp.AttributePriorities.Add(BaseAttribute.Strength);
             temp.AttributePriorities.Add(BaseAttribute.Endurance);
-            temp.AttributePriorities.Add(BaseAttribute.Dexterity);
+            temp.AttributePriorities.Add(BaseAttribute.Speed);
             temp.AttributePriorities.Add(BaseAttribute.Agility);
             temp.AttributePriorities.Add(BaseAttribute.Senses);
             temp.AttributePriorities.Add(BaseAttribute.Willpower);
@@ -887,9 +886,8 @@ namespace Descension.Core
             temp.StartingItems.Add(new ItemShort("Short Bow", "Wood", "", "", ""));
             temp.StartingItems.Add(new ItemShort("Hat", "Leather", "", "", ""));
             temp.SkillProficiencies.Add(new SkillProficiency(Skill.Archery, 3, 6));
-            temp.SkillProficiencies.Add(new SkillProficiency(Skill.Navigation, 3, 6));
             temp.SkillProficiencies.Add(new SkillProficiency(Skill.Scouting, 3, 3));
-            temp.SkillProficiencies.Add(new SkillProficiency(Skill.One_Hand_Melee, 2, 0));
+            temp.SkillProficiencies.Add(new SkillProficiency(Skill.Slashing_Weapons, 2, 0));
             temp.SkillProficiencies.Add(new SkillProficiency(Skill.Light_Armor, 2, 0));
             temp.SkillProficiencies.Add(new SkillProficiency(Skill.Survival, 2, 1));
             temp.SkillProficiencies.Add(new SkillProficiency(Skill.Air_Magic, 1, 0));
@@ -897,7 +895,7 @@ namespace Descension.Core
             temp.Powers.Add(new AbilityUnlock(AbilityType.Power, "Eagle Eye", 1));
             temp.AttributePriorities.Add(BaseAttribute.Senses);
             temp.AttributePriorities.Add(BaseAttribute.Agility);
-            temp.AttributePriorities.Add(BaseAttribute.Dexterity);
+            temp.AttributePriorities.Add(BaseAttribute.Speed);
             temp.AttributePriorities.Add(BaseAttribute.Willpower);
             temp.AttributePriorities.Add(BaseAttribute.Strength);
             temp.AttributePriorities.Add(BaseAttribute.Endurance);
@@ -907,14 +905,14 @@ namespace Descension.Core
             temp.AttributePriorities.Add(BaseAttribute.Memory);
             temp.MinimumAttributes[(int)BaseAttribute.Senses] = 18;
             temp.MinimumAttributes[(int)BaseAttribute.Agility] = 18;
-            temp.MinimumAttributes[(int)BaseAttribute.Dexterity] = 15;
+            temp.MinimumAttributes[(int)BaseAttribute.Speed] = 15;
             professions.Add(temp.Key, temp);
 
             temp = new Profession("Rogue", "Rogue", "", 120, new UpkeepData(3, 0, 1, 0), new GameValue(40, 50));
             temp.HealthPerLevel = new GameValue(7); temp.StaminaPerLevel = new GameValue(5); temp.EssencePerLevel = new GameValue(1);
             temp.StartingItems.Add(new ItemShort("Knife", "Copper", "", "", ""));
             temp.StartingItems.Add(new ItemShort("Knife", "Copper", "", "", ""));
-            temp.SkillProficiencies.Add(new SkillProficiency(Skill.One_Hand_Melee, 3, 6));
+            temp.SkillProficiencies.Add(new SkillProficiency(Skill.Slashing_Weapons, 3, 6));
             temp.SkillProficiencies.Add(new SkillProficiency(Skill.Tricks, 3, 6));
             temp.SkillProficiencies.Add(new SkillProficiency(Skill.Devices, 3, 1));
             temp.SkillProficiencies.Add(new SkillProficiency(Skill.Scouting, 2, 1));
@@ -924,7 +922,7 @@ namespace Descension.Core
             temp.SkillProficiencies.Add(new SkillProficiency(Skill.Light_Armor, 1, 0));
             temp.Powers.Add(new AbilityUnlock(AbilityType.Power, "Stealth", 1));
             temp.Powers.Add(new AbilityUnlock(AbilityType.Power, "Pickpocket", 1));
-            temp.AttributePriorities.Add(BaseAttribute.Dexterity);
+            temp.AttributePriorities.Add(BaseAttribute.Speed);
             temp.AttributePriorities.Add(BaseAttribute.Agility);
             temp.AttributePriorities.Add(BaseAttribute.Senses);
             temp.AttributePriorities.Add(BaseAttribute.Memory);
@@ -935,7 +933,7 @@ namespace Descension.Core
             temp.AttributePriorities.Add(BaseAttribute.Wisdom);
             temp.AttributePriorities.Add(BaseAttribute.Charisma);
             temp.MinimumAttributes[(int)BaseAttribute.Agility] = 18;
-            temp.MinimumAttributes[(int)BaseAttribute.Dexterity] = 18;
+            temp.MinimumAttributes[(int)BaseAttribute.Speed] = 18;
             temp.MinimumAttributes[(int)BaseAttribute.Senses] = 15;
             professions.Add(temp.Key, temp);
 
@@ -950,15 +948,14 @@ namespace Descension.Core
             temp.SkillProficiencies.Add(new SkillProficiency(Skill.Leadership, 2, 1));
             temp.SkillProficiencies.Add(new SkillProficiency(Skill.Shields, 2, 0));
             temp.SkillProficiencies.Add(new SkillProficiency(Skill.Water_Magic, 2, 1));
-            temp.SkillProficiencies.Add(new SkillProficiency(Skill.One_Hand_Melee, 1, 0));
             temp.SkillProficiencies.Add(new SkillProficiency(Skill.Channeling, 1, 1));
-            temp.SkillProficiencies.Add(new SkillProficiency(Skill.Polearms, 1, 0));
+            temp.SkillProficiencies.Add(new SkillProficiency(Skill.Blunt_Weapons, 1, 0));
             temp.Spells.Add(new AbilityUnlock(AbilityType.Spell, "Bless", 1));
             temp.AttributePriorities.Add(BaseAttribute.Wisdom);
             temp.AttributePriorities.Add(BaseAttribute.Charisma);
             temp.AttributePriorities.Add(BaseAttribute.Willpower);
             temp.AttributePriorities.Add(BaseAttribute.Memory);
-            temp.AttributePriorities.Add(BaseAttribute.Dexterity);
+            temp.AttributePriorities.Add(BaseAttribute.Speed);
             temp.AttributePriorities.Add(BaseAttribute.Senses);
             temp.AttributePriorities.Add(BaseAttribute.Strength);
             temp.AttributePriorities.Add(BaseAttribute.Endurance);
@@ -979,11 +976,10 @@ namespace Descension.Core
             temp.SkillProficiencies.Add(new SkillProficiency(Skill.Earth_Magic, 2, 1));
             temp.SkillProficiencies.Add(new SkillProficiency(Skill.Lore, 1, 1));
             temp.SkillProficiencies.Add(new SkillProficiency(Skill.Arcane_Magic, 1, 1));
-            temp.SkillProficiencies.Add(new SkillProficiency(Skill.Alchemy, 1, 0));
             temp.Powers.Add(new AbilityUnlock(AbilityType.Power, "Empower Spell", 1));
             temp.AttributePriorities.Add(BaseAttribute.Intellect);
             temp.AttributePriorities.Add(BaseAttribute.Memory);
-            temp.AttributePriorities.Add(BaseAttribute.Dexterity);
+            temp.AttributePriorities.Add(BaseAttribute.Speed);
             temp.AttributePriorities.Add(BaseAttribute.Willpower);
             temp.AttributePriorities.Add(BaseAttribute.Senses);
             temp.AttributePriorities.Add(BaseAttribute.Agility);
@@ -1003,7 +999,7 @@ namespace Descension.Core
             //temp.SkillProficiencies.Add(new SkillProficiency(Skill.Shields, 3, 10));
             //temp.MinimumAttributes[(int)BaseAttribute.Strength] = 25;
             //temp.MinimumAttributes[(int)BaseAttribute.Endurance] = 20;
-            //temp.MinimumAttributes[(int)BaseAttribute.Dexterity] = 20;
+            //temp.MinimumAttributes[(int)BaseAttribute.Speed] = 20;
             //professions.Add(temp.Key, temp);
 
             //temp = new Profession("Skirmisher", "Skirmisher", "", 125, new UpkeepData(5, 0, 0, 0), new GameValue(20, 30));
@@ -1011,7 +1007,7 @@ namespace Descension.Core
             //temp.SkillProficiencies.Add(new SkillProficiency(Skill.One_Hand_Melee, 3, 12));
             //temp.SkillProficiencies.Add(new SkillProficiency(Skill.Two_hand_Melee, 3, 10));
             //temp.SkillProficiencies.Add(new SkillProficiency(Skill.Medium_Armor, 3, 10));
-            //temp.MinimumAttributes[(int)BaseAttribute.Dexterity] = 25;
+            //temp.MinimumAttributes[(int)BaseAttribute.Speed] = 25;
             //temp.MinimumAttributes[(int)BaseAttribute.Strength] = 20;
             //temp.MinimumAttributes[(int)BaseAttribute.Endurance] = 20;
             //professions.Add(temp.Key, temp);
@@ -1021,7 +1017,7 @@ namespace Descension.Core
             //temp.SkillProficiencies.Add(new SkillProficiency(Skill.Archery, 3, 12));
             //temp.SkillProficiencies.Add(new SkillProficiency(Skill.Medium_Armor, 3, 10));
             //temp.SkillProficiencies.Add(new SkillProficiency(Skill.Scouting, 3, 10));
-            //temp.MinimumAttributes[(int)BaseAttribute.Dexterity] = 25;
+            //temp.MinimumAttributes[(int)BaseAttribute.Speed] = 25;
             //temp.MinimumAttributes[(int)BaseAttribute.Agility] = 20;
             //temp.MinimumAttributes[(int)BaseAttribute.Senses] = 20;
             //professions.Add(temp.Key, temp);
@@ -1038,7 +1034,7 @@ namespace Descension.Core
             //temp.SkillProficiencies.Add(new SkillProficiency(Skill.Stealth, 3, 12));
             //temp.SkillProficiencies.Add(new SkillProficiency(Skill.Devices, 3, 10));
             //temp.SkillProficiencies.Add(new SkillProficiency(Skill.Tricks, 3, 10));
-            //temp.MinimumAttributes[(int)BaseAttribute.Dexterity] = 25;
+            //temp.MinimumAttributes[(int)BaseAttribute.Speed] = 25;
             //temp.MinimumAttributes[(int)BaseAttribute.Agility] = 20;
             //temp.MinimumAttributes[(int)BaseAttribute.Senses] = 20;
             //professions.Add(temp.Key, temp);
@@ -1048,7 +1044,7 @@ namespace Descension.Core
             //temp.SkillProficiencies.Add(new SkillProficiency(Skill.One_Hand_Melee, 3, 12));
             //temp.SkillProficiencies.Add(new SkillProficiency(Skill.Medium_Armor, 3, 10));
             //temp.SkillProficiencies.Add(new SkillProficiency(Skill.Stealth, 3, 10));
-            //temp.MinimumAttributes[(int)BaseAttribute.Dexterity] = 25;
+            //temp.MinimumAttributes[(int)BaseAttribute.Speed] = 25;
             //temp.MinimumAttributes[(int)BaseAttribute.Strength] = 20;
             //temp.MinimumAttributes[(int)BaseAttribute.Agility] = 20;
             //professions.Add(temp.Key, temp);
@@ -1080,7 +1076,7 @@ namespace Descension.Core
             //temp.SkillProficiencies.Add(new SkillProficiency(Skill.Lore, 3, 10));
             //temp.MinimumAttributes[(int)BaseAttribute.Intellect] = 25;
             //temp.MinimumAttributes[(int)BaseAttribute.Memory] = 20;
-            //temp.MinimumAttributes[(int)BaseAttribute.Dexterity] = 20;
+            //temp.MinimumAttributes[(int)BaseAttribute.Speed] = 20;
             //professions.Add(temp.Key, temp);
 
             //temp = new Profession("Elementalist", "Elementalist", "", 175, new UpkeepData(5, 0, 0, 0), new GameValue(20, 30));
@@ -1097,192 +1093,64 @@ namespace Descension.Core
 
         static void LoadRaces()
         {
-            //Race temp = new Race("Beastman", "Beastman", "", "", false, "", "", false, false,
-            //    new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 10, 1.0f, new UpkeepData(0, 9, 0, 0), new GameValue(1, 5),
-            //    new Vector3(1,1,1), "", "", "", "");
-            //temp.Powers.Add(new AbilityUnlock(AbilityType.Power, "Bestial Rage", 1));
-            //temp.StartingAttributes[(int)BaseAttribute.Strength].Number = 2;
-            //temp.StartingAttributes[(int)BaseAttribute.Endurance].Number = 2;
-            //temp.StartingAttributes[(int)BaseAttribute.Intellect].Number = -5;
-            //temp.StartingAttributes[(int)BaseAttribute.Willpower].Number = 5;
-            //races.Add(temp.Key, temp);
-
-            //temp = new Race("Deep Dwarf", "Deep Dwarf", "", "", true, "", "", true, true,
-            //    new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 8, 1.0f, new UpkeepData(0, 9, 0, 0), new GameValue(1, 5),
-            //    new Vector3(1, 1, 1), "", "", "", "");
-            //temp.Traits.Add(new AbilityUnlock(AbilityType.Trait, "Dark Vision", 1));
-            //temp.StartingAttributes[(int)BaseAttribute.Endurance].Number = 2;
-            //temp.StartingAttributes[(int)BaseAttribute.Agility].Number = -2;
-            //temp.StartingAttributes[(int)BaseAttribute.Intellect].Number = 2;
-            //temp.StartingAttributes[(int)BaseAttribute.Willpower].Number = 2;
-            //races.Add(temp.Key, temp);
-
-            //temp = new Race("Spriggan", "Spriggan", "", "", false, "", "", false, true,
-            //    new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 6, 0.5f, new UpkeepData(0, 4, 0, 0), new GameValue(1, 5),
-            //    new Vector3(1, 1, 1), "", "", "", "");
-            //temp.StartingAttributes[(int)BaseAttribute.Agility].Number = 2;
-            //temp.StartingAttributes[(int)BaseAttribute.Dexterity].Number = 2;
-            //temp.StartingAttributes[(int)BaseAttribute.Senses].Number = 2;
-            //temp.StartingAttributes[(int)BaseAttribute.Intellect].Number = -3;
-            //races.Add(temp.Key, temp);
-
-            //temp = new Race("Forest Elf", "Forest Elf", "", "", false, "", "", true, true,
-            //    new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 11, 0.75f, new UpkeepData(0, 5, 0, 0), new GameValue(1, 5),
-            //    new Vector3(1, 1, 1), "", "", "", "");
-            //temp.Traits.Add(new AbilityUnlock(AbilityType.Trait, "Camoflage", 1));
-            //races.Add(temp.Key, temp);
-
-            //temp = new Race("Goblin", "Goblin", "", "", true, "", "", true, true,
-            //    new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 9, 0.8f, new UpkeepData(0, 8, 0, 0), new GameValue(1, 5),
-            //    new Vector3(1, 1, 1), "", "", "", "");
-            //races.Add(temp.Key, temp);
-
-            //temp = new Race("Godkin", "Godkin", "", "", false, "", "", true, true,
-            //    new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 12, 0.1f, new UpkeepData(0, 0, 0, 5), new GameValue(1, 5),
-            //    new Vector3(1, 1, 1), "", "", "", "");
-            //temp.Resistances.Add(new ResistanceData(DamageType.Holy, 95));
-            //races.Add(temp.Key, temp);
-
-            //temp = new Race("Half Orc", "Half Orc", "", "", false, "", "", true, true,
-            //    new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 10, 1.0f, new UpkeepData(0, 8, 0, 0), new GameValue(1, 5),
-            //    new Vector3(1, 1, 1), "", "", "", "");
-            //races.Add(temp.Key, temp);
-
-            Race temp = new Race("Halfling", "Halfling", "Halfling Male", "Halfling Female", true, "", "", true, false,
+            Race race = new Race("Halfling", "Halfling", "Halfling Male", "Halfling Female", true, "", "", true, false,
                 new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 10, 1.0f, new UpkeepData(0, 12, 0, 0), new GameValue(1, 5),
-                new Vector3(0.7f, 0.8f, 0.8f), "hair 13", "", "hair 13", "");
-            temp.StartingAttributes[(int)BaseAttribute.Endurance].Number = 2;
-            temp.StartingAttributes[(int)BaseAttribute.Agility].Number = 4;
-            temp.StartingAttributes[(int)BaseAttribute.Charisma].Number = 4;
-            temp.StartingAttributes[(int)BaseAttribute.Memory].Number = 2;
-            races.Add(temp.Key, temp);
+                new Vector3(0.7f, 0.8f, 0.8f), "Hair 1", "", "Hair 1", "");
+            race.StartingAttributes[(int)BaseAttribute.Endurance].Number = 2;
+            race.StartingAttributes[(int)BaseAttribute.Agility].Number = 4;
+            race.StartingAttributes[(int)BaseAttribute.Charisma].Number = 4;
+            race.StartingAttributes[(int)BaseAttribute.Memory].Number = 2;
+            races.Add(race.Key, race);
 
-            temp = new Race("High Elf", "High Elf", "High Elf Male", "High Elf Female", false, "", "", true, true,
+            race = new Race("High Elf", "High Elf", "High Elf Male", "High Elf Female", false, "", "", true, true,
                 new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 10, 0.5f, new UpkeepData(0, 5, 0, 0), new GameValue(1, 5),
-                new Vector3(0.65f, 0.9f, 0.8f), "hair 13", "", "hair 15", "");
-            temp.StartingAttributes[(int)BaseAttribute.Endurance].Number = -2;
-            temp.StartingAttributes[(int)BaseAttribute.Agility].Number = 4;
-            temp.StartingAttributes[(int)BaseAttribute.Intellect].Number = 4;
-            temp.StartingAttributes[(int)BaseAttribute.Memory].Number = 2;
-            races.Add(temp.Key, temp);
+                new Vector3(0.65f, 0.9f, 0.8f), "Hair 1", "", "Hair 1", "");
+            race.StartingAttributes[(int)BaseAttribute.Endurance].Number = -2;
+            race.StartingAttributes[(int)BaseAttribute.Agility].Number = 4;
+            race.StartingAttributes[(int)BaseAttribute.Intellect].Number = 4;
+            race.StartingAttributes[(int)BaseAttribute.Memory].Number = 2;
+            races.Add(race.Key, race);
 
-            temp = new Race("Mountain Dwarf", "Mountain Dwarf", "Mountain Dwarf Male", "Mountain Dwarf Female", true, "", "", true, true,
+            race = new Race("Mountain Dwarf", "Mountain Dwarf", "Mountain Dwarf Male", "Mountain Dwarf Female", true, "", "", true, true,
                 new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 9, 1.0f, new UpkeepData(0, 8, 0, 0), new GameValue(1, 5),
-                new Vector3(1, 0.75f, 1.1f), "hair 14", "beard 07", "hair 15", "");
-            temp.StartingAttributes[(int)BaseAttribute.Strength].Number = 4;
-            temp.StartingAttributes[(int)BaseAttribute.Endurance].Number = 4;
-            temp.StartingAttributes[(int)BaseAttribute.Agility].Number = -4;
-            temp.Traits.Add(new AbilityUnlock(AbilityType.Trait, "Dark Vision", 1));
-            races.Add(temp.Key, temp);
+                new Vector3(1, 0.75f, 1.1f), "Hair 1", "Beard 1", "Hair 1", "");
+            race.StartingAttributes[(int)BaseAttribute.Strength].Number = 4;
+            race.StartingAttributes[(int)BaseAttribute.Endurance].Number = 4;
+            race.StartingAttributes[(int)BaseAttribute.Agility].Number = -4;
+            race.Traits.Add(new AbilityUnlock(AbilityType.Trait, "Dark Vision", 1));
+            races.Add(race.Key, race);
 
-            temp = new Race("Imperial", "Imperial", "Imperial Male", "Imperial Female", false, "", "", true, true,
+            race = new Race("Imperial", "Imperial", "Imperial Male", "Imperial Female", false, "", "", true, true,
                 new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 10, 1.1f, new UpkeepData(0, 7, 0, 0), new GameValue(1, 5),
-                new Vector3(1, 1, 1), "hair 13", "beard 01", "hair 15", "");
-            temp.Traits.Add(new AbilityUnlock(AbilityType.Trait, "Fast Learner", 1));
-            races.Add(temp.Key, temp);
+                new Vector3(1, 1, 1), "Hair 1", "Beard 1", "Hair 1", "");
+            race.Traits.Add(new AbilityUnlock(AbilityType.Trait, "Fast Learner", 1));
+            races.Add(race.Key, race);
 
-            //temp = new Race("Southerner", "Southerner", "", "", false, "", "", true, true,
-            //    new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 10, 1.1f, new UpkeepData(0, 7, 0, 0), new GameValue(1, 5),
-            //    new Vector3(1, 1, 1), "", "", "", "");
-            //temp.Traits.Add(new AbilityUnlock(AbilityType.Trait, "Fast Learner", 1));
-            //races.Add(temp.Key, temp);
-
-            temp = new Race("Half Ogre", "Half Ogre", "Half Ogre Male", "Half Ogre Female", false, "", "", true, true,
+            race = new Race("Half Ogre", "Half Ogre", "Half Ogre Male", "Half Ogre Female", false, "", "", true, true,
                 new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 10, 1.1f, new UpkeepData(0, 7, 0, 0), new GameValue(1, 5),
-                new Vector3(1, 1, 1), "hair 13", "beard 01", "hair 15", "");
-            temp.StartingAttributes[(int)BaseAttribute.Strength].Number = 8;
-            temp.StartingAttributes[(int)BaseAttribute.Endurance].Number = 4;
-            temp.StartingAttributes[(int)BaseAttribute.Agility].Number = -5;
-            temp.StartingAttributes[(int)BaseAttribute.Dexterity].Number = -5;
-            temp.StartingAttributes[(int)BaseAttribute.Intellect].Number = -5;
-            temp.Traits.Add(new AbilityUnlock(AbilityType.Trait, "Fast Learner", 1));
-            races.Add(temp.Key, temp);
-
-            //temp = new Race("Orc", "Orc", "", "", false, "", "", true, true,
-            //    new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 10, 1.0f, new UpkeepData(0, 9, 0, 0), new GameValue(1, 5),
-            //    new Vector3(1, 1, 1), "", "", "", "");
-            //races.Add(temp.Key, temp);
-
-            //temp = new Race("Plains Dwarf", "Plains Dwarf", "", "", true, "", "", true, true,
-            //    new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 9, 1.1f, new UpkeepData(0, 9, 0, 0), new GameValue(1, 5),
-            //    new Vector3(1, 1, 1), "", "", "", "");
-            //races.Add(temp.Key, temp);
-
-            //temp = new Race("Sidhe", "Sidhe", "", "", false, "race_323", "", true, true,
-            //    new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 16, 0.2f, new UpkeepData(0, 2, 0, 0), new GameValue(1, 5),
-            //    new Vector3(1, 1, 1), "", "", "", "");
-            //temp.Traits.Add(new AbilityUnlock(AbilityType.Trait, "Flight", 1));
-            //races.Add(temp.Key, temp);
-
-            //temp = new Race("Revenant", "Revenant", "", "", false, "", "", true, true,
-            //    new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 7, 0.2f, new UpkeepData(0, 0, 0, 4), new GameValue(1, 5),
-            //    new Vector3(1, 1, 1), "", "", "", "");
-            //temp.Traits.Add(new AbilityUnlock(AbilityType.Trait, "Undead", 1));
-            //races.Add(temp.Key, temp);
-
-            //temp = new Race("Shade", "Shade", "", "", false, "race_321", "", true, true,
-            //    new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 11, 0.5f, new UpkeepData(0, 0, 0, 6), new GameValue(1, 5),
-            //    new Vector3(1, 1, 1), "", "", "", "");
-            //temp.Traits.Add(new AbilityUnlock(AbilityType.Trait, "Undead", 1));
-            //races.Add(temp.Key, temp);
-
-            //temp = new Race("Shadow Elf", "Shadow Elf", "", "", false, "", "", true, true,
-            //    new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 10, 0.5f, new UpkeepData(0, 4, 0, 0), new GameValue(1, 5),
-            //    new Vector3(1, 1, 1), "", "", "", "");
-            //temp.Traits.Add(new AbilityUnlock(AbilityType.Trait, "Dark Vision", 1));
-            //races.Add(temp.Key, temp);
-
-            //temp = new Race("Trollkin", "Trollkin", "", "", false, "", "", true, true,
-            //    new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 10, 0.75f, new UpkeepData(0, 11, 0, 0), new GameValue(1, 5),
-            //    new Vector3(1, 1, 1), "", "", "", "");
-            //temp.Traits.Add(new AbilityUnlock(AbilityType.Trait, "Regeneration", 1));
-            //races.Add(temp.Key, temp);
-
-            //temp = new Race("Valarian", "Valarian", "", "", false, "", "", true, true,
-            //    new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 10, 0.75f, new UpkeepData(0, 5, 0, 1), new GameValue(1, 5),
-            //    new Vector3(1, 1, 1), "", "", "", "");
-            //races.Add(temp.Key, temp);
-
-            //temp = new Race("Vampire", "Vampire", "", "", false, "race_320", "", true, true,
-            //    new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 14, 0.1f, new UpkeepData(0, 0, 0, 6), new GameValue(1, 5),
-            //    new Vector3(1, 1, 1), "", "", "", "");
-            //temp.Traits.Add(new AbilityUnlock(AbilityType.Trait, "Undead", 1));
-            //races.Add(temp.Key, temp);
-
-            //temp = new Race("Wolfen", "Wolfen", "", "", false, "", "", true, true,
-            //    new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 12, 1.0f, new UpkeepData(0, 9, 0, 1), new GameValue(1, 5),
-            //    new Vector3(1, 1, 1), "", "", "", "");
-            //races.Add(temp.Key, temp);
-
-            //temp = new Race("Infernal", "Infernal", "", "", false, "", "", true, true,
-            //    new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 12, 1.0f, new UpkeepData(0, 7, 0, 1), new GameValue(1, 5),
-            //    new Vector3(1, 1, 1), "", "", "", "");
-            //races.Add(temp.Key, temp);
-
-            //temp = new Race("Gnome", "Gnome", "", "", false, "", "", true, true,
-            //    new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 12, 1.0f, new UpkeepData(0, 5, 1, 1), new GameValue(1, 5),
-            //    new Vector3(1, 1, 1), "", "", "", "");
-            //races.Add(temp.Key, temp);
-
-            //temp = new Race("Half Ogre", "Half Ogre", "", "", false, "", "", false, false,
-            //    new GameValue(1, 10), new GameValue(1, 10), new GameValue(1, 10), 12, 1.0f, new UpkeepData(0, 11, 0, 0), new GameValue(1, 5),
-            //    new Vector3(1, 1, 1), "", "", "", "");
-            //races.Add(temp.Key, temp);
+                new Vector3(1, 1, 1), "Hair 1", "Beard 1", "Hair 1", "");
+            race.StartingAttributes[(int)BaseAttribute.Strength].Number = 8;
+            race.StartingAttributes[(int)BaseAttribute.Endurance].Number = 4;
+            race.StartingAttributes[(int)BaseAttribute.Agility].Number = -5;
+            race.StartingAttributes[(int)BaseAttribute.Speed].Number = -5;
+            race.StartingAttributes[(int)BaseAttribute.Intellect].Number = -5;
+            race.Traits.Add(new AbilityUnlock(AbilityType.Trait, "Fast Learner", 1));
+            races.Add(race.Key, race);
         }
 
         static void LoadTraits()
         {
-            Ability ability = new Ability("Regeneration", "Regeneration", "abilities_77", AbilityClass.None, AbilityType.Trait);
+            Ability ability = new Ability("Regeneration", "Regeneration", "trait", AbilityClass.None, AbilityType.Trait);
             ability.Components.Add(new TraitTypeComponent(TraitType.Misc));
             ability.Components.Add(new DurationComponent(DurationType.Permanent));
             abilities.Add(ability.Key, ability);
 
-            ability = new Ability("Fast Learner", "Fast Learner", "abilities_232", AbilityClass.None, AbilityType.Trait);
+            ability = new Ability("Fast Learner", "Fast Learner", "trait", AbilityClass.None, AbilityType.Trait);
             ability.Components.Add(new TraitTypeComponent(TraitType.Misc));
             ability.Components.Add(new DurationComponent(DurationType.Permanent));
             abilities.Add(ability.Key, ability);
 
-            ability = new Ability("Undead", "Undead", "abilities_60", AbilityClass.None, AbilityType.Trait);
+            ability = new Ability("Undead", "Undead", "trait", AbilityClass.None, AbilityType.Trait);
             ability.Components.Add(new TraitTypeComponent(TraitType.Misc));
             ability.Components.Add(new DurationComponent(DurationType.Permanent));
             abilities.Add(ability.Key, ability);
@@ -1325,7 +1193,7 @@ namespace Descension.Core
 
         static void LoadPowers()
         {
-            Ability ability = new Ability("Strike", "Strike", "strike", AbilityClass.Encounter, AbilityType.Power, 1f, 0, Skill.One_Hand_Melee, 1);
+            Ability ability = new Ability("Strike", "Strike", "strike", AbilityClass.Encounter, AbilityType.Power, 1f, 0, Skill.Slashing_Weapons, 1);
             ability.Components.Add(new ResourceComponent(DerivedAttribute.Stamina, 10));
             ability.Components.Add(new DurationComponent(DurationType.Instant, TimeType.None));
             ability.Components.Add(new CooldownComponent(TimeType.Turn, 5));
@@ -1334,7 +1202,7 @@ namespace Descension.Core
             ability.Components.Add(new AreaComponent(AreaType.Single));
             abilities.Add(ability.Key, ability);
 
-            ability = new Ability("Power Strike", "Power Strike", "power strike", AbilityClass.Encounter, AbilityType.Power, 5f, 1000, Skill.One_Hand_Melee, 5);
+            ability = new Ability("Power Strike", "Power Strike", "power strike", AbilityClass.Encounter, AbilityType.Power, 5f, 1000, Skill.Slashing_Weapons, 5);
             ability.Components.Add(new ResourceComponent(DerivedAttribute.Stamina, 10));
             ability.Components.Add(new DurationComponent(DurationType.Instant, TimeType.None));
             ability.Components.Add(new CooldownComponent(TimeType.Turn, 5));
@@ -1343,7 +1211,7 @@ namespace Descension.Core
             ability.Components.Add(new AreaComponent(AreaType.Single));
             abilities.Add(ability.Key, ability);
 
-            ability = new Ability("Reckless Strike", "Reckless Strike", "reckless strike", AbilityClass.Encounter, AbilityType.Power, 5f, 1000, Skill.Two_hand_Melee, 5);
+            ability = new Ability("Reckless Strike", "Reckless Strike", "reckless strike", AbilityClass.Encounter, AbilityType.Power, 5f, 1000, Skill.Slashing_Weapons, 5);
             ability.Components.Add(new ResourceComponent(DerivedAttribute.Stamina, 10));
             ability.Components.Add(new DurationComponent(DurationType.Instant, TimeType.None));
             ability.Components.Add(new CooldownComponent(TimeType.Turn, 5));
@@ -1352,7 +1220,7 @@ namespace Descension.Core
             ability.Components.Add(new AreaComponent(AreaType.Single));
             abilities.Add(ability.Key, ability);
 
-            ability = new Ability("Whirlwind", "Whirlwind", "whirlwind", AbilityClass.Encounter, AbilityType.Power, 5f, 1000, Skill.Two_hand_Melee, 10);
+            ability = new Ability("Whirlwind", "Whirlwind", "whirlwind", AbilityClass.Encounter, AbilityType.Power, 5f, 1000, Skill.Slashing_Weapons, 10);
             ability.Components.Add(new ResourceComponent(DerivedAttribute.Stamina, 10));
             ability.Components.Add(new DurationComponent(DurationType.Instant, TimeType.None));
             ability.Components.Add(new CooldownComponent(TimeType.Turn, 5));
@@ -1361,7 +1229,7 @@ namespace Descension.Core
             ability.Components.Add(new AreaComponent(AreaType.Sphere));
             abilities.Add(ability.Key, ability);
 
-            ability = new Ability("Long Strike", "Long Strike", "long strike", AbilityClass.Encounter, AbilityType.Power, 5f, 0, Skill.Polearms, 1);
+            ability = new Ability("Long Strike", "Long Strike", "long strike", AbilityClass.Encounter, AbilityType.Power, 5f, 0, Skill.Piercing_Weapons, 1);
             ability.Components.Add(new ResourceComponent(DerivedAttribute.Stamina, 10));
             ability.Components.Add(new DurationComponent(DurationType.Instant, TimeType.None));
             ability.Components.Add(new CooldownComponent(TimeType.Turn, 5));
@@ -1370,7 +1238,7 @@ namespace Descension.Core
             ability.Components.Add(new AreaComponent(AreaType.Beam));
             abilities.Add(ability.Key, ability);
 
-            ability = new Ability("Piercing Strike", "Piercing Strike", "piercing strike", AbilityClass.Encounter, AbilityType.Power, 5f, 1000, Skill.Polearms, 5);
+            ability = new Ability("Piercing Strike", "Piercing Strike", "piercing strike", AbilityClass.Encounter, AbilityType.Power, 5f, 1000, Skill.Piercing_Weapons, 5);
             ability.Components.Add(new ResourceComponent(DerivedAttribute.Stamina, 10));
             ability.Components.Add(new DurationComponent(DurationType.Instant, TimeType.None));
             ability.Components.Add(new CooldownComponent(TimeType.Turn, 5));
@@ -1379,7 +1247,7 @@ namespace Descension.Core
             ability.Components.Add(new AreaComponent(AreaType.Beam));
             abilities.Add(ability.Key, ability);
 
-            ability = new Ability("Stunning Blow", "Stunning Blow", "stunning blow", AbilityClass.Encounter, AbilityType.Power, 5f, 1000, Skill.One_Hand_Melee, 5);
+            ability = new Ability("Stunning Blow", "Stunning Blow", "stunning blow", AbilityClass.Encounter, AbilityType.Power, 5f, 1000, Skill.Blunt_Weapons, 5);
             ability.Components.Add(new ResourceComponent(DerivedAttribute.Stamina, 10));
             ability.Components.Add(new DurationComponent(DurationType.Instant, TimeType.None));
             ability.Components.Add(new CooldownComponent(TimeType.Turn, 5));
@@ -1455,7 +1323,7 @@ namespace Descension.Core
             ability.Components.Add(new DurationComponent(DurationType.Instant, TimeType.None));
             abilities.Add(ability.Key, ability);
 
-            ability = new Ability("Careful Strike", "Careful Strike", "careful strike", AbilityClass.Encounter, AbilityType.Power, 5f, 1000, Skill.One_Hand_Melee, 5);
+            ability = new Ability("Careful Strike", "Careful Strike", "careful strike", AbilityClass.Encounter, AbilityType.Power, 5f, 1000, Skill.Slashing_Weapons, 5);
             ability.Components.Add(new ResourceComponent(DerivedAttribute.Stamina, 10));
             ability.Components.Add(new DurationComponent(DurationType.Instant, TimeType.None));
             ability.Components.Add(new CooldownComponent(TimeType.Turn, 5));
@@ -1881,7 +1749,7 @@ namespace Descension.Core
             bA = new AttributeDefinition("Agility", "Agility", "Agi", "", 0, 999, AttributeDefinitionType.Base, null);
             baseAttributeDefinitions.Add(bA);
 
-            bA = new AttributeDefinition("Dexterity", "Dexterity", "Dex", "", 0, 999, AttributeDefinitionType.Base, null);
+            bA = new AttributeDefinition("Speed", "Speed", "Spd", "", 0, 999, AttributeDefinitionType.Base, null);
             baseAttributeDefinitions.Add(bA);
 
             bA = new AttributeDefinition("Senses", "Senses", "Sns", "", 0, 999, AttributeDefinitionType.Base, null);
@@ -1905,6 +1773,13 @@ namespace Descension.Core
             AttributeDefinition dA = new AttributeDefinition("Actions", "Actions", "Act", "", 0, 999, AttributeDefinitionType.Derived_Points, new AttributeCalculation(
                     new AttributeModifier(AttributeModifierType.Base_Attribute, (int)BaseAttribute.Agility),
                     new AttributeModifier(AttributeModifierType.Base_Attribute, (int)BaseAttribute.Senses), null,
+                    AttributeCalculationOpperator.Add,
+                    AttributeCalculationOpperator.None));
+            derivedAttributeDefinitions.Add(dA);
+
+            dA = new AttributeDefinition("Movement", "Movement", "Mov", "", 0, 999, AttributeDefinitionType.Derived_Points, new AttributeCalculation(
+                    new AttributeModifier(AttributeModifierType.Base_Attribute, (int)BaseAttribute.Speed),
+                    new AttributeModifier(AttributeModifierType.Base_Attribute, (int)BaseAttribute.Willpower), null,
                     AttributeCalculationOpperator.Add,
                     AttributeCalculationOpperator.None));
             derivedAttributeDefinitions.Add(dA);
@@ -2000,7 +1875,7 @@ namespace Descension.Core
 
             dA = new AttributeDefinition("Parry", "Parry", "Par", "", 0, 999, AttributeDefinitionType.Derived_Score, new AttributeCalculation(
                     new AttributeModifier(AttributeModifierType.Base_Attribute, (int)BaseAttribute.Agility),
-                    new AttributeModifier(AttributeModifierType.Base_Attribute, (int)BaseAttribute.Dexterity), null,
+                    new AttributeModifier(AttributeModifierType.Base_Attribute, (int)BaseAttribute.Speed), null,
                     AttributeCalculationOpperator.Add,
                     AttributeCalculationOpperator.None));
             derivedAttributeDefinitions.Add(dA);
@@ -2014,7 +1889,7 @@ namespace Descension.Core
 
             dA = new AttributeDefinition("Initiative", "Initiative", "Ini", "", 0, 99, AttributeDefinitionType.Derived_Score, new AttributeCalculation(
                     new AttributeModifier(AttributeModifierType.Base_Attribute, (int)BaseAttribute.Agility),
-                    new AttributeModifier(AttributeModifierType.Base_Attribute, (int)BaseAttribute.Dexterity), null,
+                    new AttributeModifier(AttributeModifierType.Base_Attribute, (int)BaseAttribute.Speed), null,
                     AttributeCalculationOpperator.Add,
                     AttributeCalculationOpperator.None));
             derivedAttributeDefinitions.Add(dA);
@@ -2034,7 +1909,7 @@ namespace Descension.Core
 
 
             dA = new AttributeDefinition("Bonus Actions", "Bonus Actions", "Bact", "", -1000, 1000, AttributeDefinitionType.Derived_Percent, new AttributeCalculation(
-                    new AttributeModifier(AttributeModifierType.Base_Attribute, (int)BaseAttribute.Dexterity),
+                    new AttributeModifier(AttributeModifierType.Base_Attribute, (int)BaseAttribute.Speed),
                     new AttributeModifier(AttributeModifierType.Value, 20),
                     new AttributeModifier(AttributeModifierType.Value, 1),
                     AttributeCalculationOpperator.Subtract,
@@ -2070,34 +1945,11 @@ namespace Descension.Core
             derivedAttributeDefinitions.Add(dA);
 
             dA = new AttributeDefinition("Critical Dmg", "Crit Dmg", "CD", "", 0, 1000, AttributeDefinitionType.Derived_Percent, new AttributeCalculation(
-                    new AttributeModifier(AttributeModifierType.Base_Attribute, (int)BaseAttribute.Dexterity),
+                    new AttributeModifier(AttributeModifierType.Base_Attribute, (int)BaseAttribute.Speed),
                     new AttributeModifier(AttributeModifierType.Base_Attribute, (int)BaseAttribute.Senses), null,
                     AttributeCalculationOpperator.Add,
                     AttributeCalculationOpperator.None));
             derivedAttributeDefinitions.Add(dA);
-
-
-            dA = new AttributeDefinition("Health Regen", "Health Reg", "HReg", "", 0, 1000, AttributeDefinitionType.Derived_Score, new AttributeCalculation(
-                    new AttributeModifier(AttributeModifierType.Base_Attribute, (int)BaseAttribute.Endurance),
-                    new AttributeModifier(AttributeModifierType.Value, 20), null,
-                    AttributeCalculationOpperator.Subtract,
-                    AttributeCalculationOpperator.None));
-            derivedAttributeDefinitions.Add(dA);
-
-            dA = new AttributeDefinition("Stamina Regen", "Stamina Reg", "SReg", "", 0, 1000, AttributeDefinitionType.Derived_Score, new AttributeCalculation(
-                    new AttributeModifier(AttributeModifierType.Base_Attribute, (int)BaseAttribute.Willpower),
-                    new AttributeModifier(AttributeModifierType.Value, 20), null,
-                    AttributeCalculationOpperator.Subtract,
-                    AttributeCalculationOpperator.None));
-            derivedAttributeDefinitions.Add(dA);
-
-            dA = new AttributeDefinition("Essence Regen", "Essence Reg", "EReg", "", 0, 1000, AttributeDefinitionType.Derived_Score, new AttributeCalculation(
-                    new AttributeModifier(AttributeModifierType.Base_Attribute, (int)BaseAttribute.Willpower),
-                    new AttributeModifier(AttributeModifierType.Value, 20), null,
-                    AttributeCalculationOpperator.Subtract,
-                    AttributeCalculationOpperator.None));
-            derivedAttributeDefinitions.Add(dA);
-
 
 
             AttributeDefinition res = new AttributeDefinition("Physical", "Physical", "Phy", "", 0, 9999, AttributeDefinitionType.Resistance, null);
@@ -2133,15 +1985,15 @@ namespace Descension.Core
 
         public static void LoadSkills()
         {
-            SkillDefinition skill = new SkillDefinition(SkillCategory.Combat, Skill.One_Hand_Melee, "One Handed Melee", "1h Melee", "1HM", "", "strength", 0, 999,
+            SkillDefinition skill = new SkillDefinition(SkillCategory.Combat, Skill.Slashing_Weapons, "Slashing Weapons", "Slash", "SlW", "", "strength", 0, 999,
                 new List<AbilityUnlock> { });
             skillDefinitions.Add(skill);
 
-            skill = new SkillDefinition(SkillCategory.Combat, Skill.Two_hand_Melee, "Two Handed Melee", "2h Melee", "2HM", "", "strength", 0, 999,
+            skill = new SkillDefinition(SkillCategory.Combat, Skill.Piercing_Weapons, "Piercing Weapons", "Pierce", "PiW", "", "strength", 0, 999,
                 new List<AbilityUnlock> { });
             skillDefinitions.Add(skill);
 
-            skill = new SkillDefinition(SkillCategory.Combat, Skill.Polearms, "Polearms", "Polearm", "Pol", "", "strength", 0, 999,
+            skill = new SkillDefinition(SkillCategory.Combat, Skill.Blunt_Weapons, "Blunt Weapons", "Blunt", "BlW", "", "strength", 0, 999,
                  new List<AbilityUnlock> { });
             skillDefinitions.Add(skill);
 
@@ -2225,14 +2077,6 @@ namespace Descension.Core
                  new List<AbilityUnlock> { });
             skillDefinitions.Add(skill);
 
-            skill = new SkillDefinition(SkillCategory.Magic, Skill.Alchemy, "Alchemy", "Alchemy", "Alc", "", "intellect", 0, 999,
-                 new List<AbilityUnlock> { });
-            skillDefinitions.Add(skill);
-
-            skill = new SkillDefinition(SkillCategory.Magic, Skill.Enchanting, "Enchanting", "Enchant", "Enc", "", "intellect", 0, 999,
-                 new List<AbilityUnlock> { });
-            skillDefinitions.Add(skill);
-
             skill = new SkillDefinition(SkillCategory.Magic, Skill.Lore, "Lore", "Lore", "Lor", "", "intellect", 0, 999,
                  new List<AbilityUnlock> { });
             skillDefinitions.Add(skill);
@@ -2241,7 +2085,7 @@ namespace Descension.Core
                  new List<AbilityUnlock> { });
             skillDefinitions.Add(skill);
 
-            skill = new SkillDefinition(SkillCategory.Misc, Skill.Stealth, "Stealth", "Stealth", "Ste", "", "agility", 0, 999,
+            skill = new SkillDefinition(SkillCategory.Misc, Skill.Sneaking, "Sneaking", "Sneak", "Snk", "", "agility", 0, 999,
                  new List<AbilityUnlock> { });
             skillDefinitions.Add(skill);
 
@@ -2269,14 +2113,6 @@ namespace Descension.Core
                  new List<AbilityUnlock> { });
             skillDefinitions.Add(skill);
 
-            skill = new SkillDefinition(SkillCategory.Misc, Skill.Navigation, "Navigation", "Navigate", "Nav", "", "senses", 0, 999,
-                 new List<AbilityUnlock> { });
-            skillDefinitions.Add(skill);
-
-            skill = new SkillDefinition(SkillCategory.Misc, Skill.Training, "Training", "Train", "Tra", "", "charisma", 0, 999,
-                 new List<AbilityUnlock> { });
-            skillDefinitions.Add(skill);
-
             skill = new SkillDefinition(SkillCategory.Misc, Skill.Medicine, "Medicine", "Medic", "Med", "", "intellect", 0, 999,
                  new List<AbilityUnlock> { });
             skillDefinitions.Add(skill);
@@ -2291,12 +2127,12 @@ namespace Descension.Core
             npc.baseStart[(int)BaseAttribute.Strength] = 10; npc.baseStart[(int)BaseAttribute.Intellect] = 10;
             npc.baseStart[(int)BaseAttribute.Endurance] = 10; npc.baseStart[(int)BaseAttribute.Wisdom] = 10;
             npc.baseStart[(int)BaseAttribute.Agility] = 10; npc.baseStart[(int)BaseAttribute.Willpower] = 10;
-            npc.baseStart[(int)BaseAttribute.Dexterity] = 10; npc.baseStart[(int)BaseAttribute.Charisma] = 10;
+            npc.baseStart[(int)BaseAttribute.Speed] = 10; npc.baseStart[(int)BaseAttribute.Charisma] = 10;
             npc.baseStart[(int)BaseAttribute.Senses] = 10; npc.baseStart[(int)BaseAttribute.Memory] = 10;
             npc.BasePerLevel[(int)BaseAttribute.Strength] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Intellect] = new GameValue(0, 0);
             npc.BasePerLevel[(int)BaseAttribute.Endurance] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Wisdom] = new GameValue(0, 0);
             npc.BasePerLevel[(int)BaseAttribute.Agility] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Willpower] = new GameValue(0, 0);
-            npc.BasePerLevel[(int)BaseAttribute.Dexterity] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Charisma] = new GameValue(0, 0);
+            npc.BasePerLevel[(int)BaseAttribute.Speed] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Charisma] = new GameValue(0, 0);
             npc.BasePerLevel[(int)BaseAttribute.Senses] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Memory] = new GameValue(0, 0);
             npc.derivedPerLevel[(int)DerivedAttribute.Armor] = new GameValue(0, 0);
             npc.derivedPerLevel[(int)DerivedAttribute.Health] = new GameValue(1, 2); npc.derivedPerLevel[(int)DerivedAttribute.Stamina] = new GameValue(1, 1);
@@ -2314,12 +2150,12 @@ namespace Descension.Core
             npc.baseStart[(int)BaseAttribute.Strength] = 10; npc.baseStart[(int)BaseAttribute.Intellect] = 10;
             npc.baseStart[(int)BaseAttribute.Endurance] = 10; npc.baseStart[(int)BaseAttribute.Wisdom] = 10;
             npc.baseStart[(int)BaseAttribute.Agility] = 10; npc.baseStart[(int)BaseAttribute.Willpower] = 10;
-            npc.baseStart[(int)BaseAttribute.Dexterity] = 10; npc.baseStart[(int)BaseAttribute.Charisma] = 10;
+            npc.baseStart[(int)BaseAttribute.Speed] = 10; npc.baseStart[(int)BaseAttribute.Charisma] = 10;
             npc.baseStart[(int)BaseAttribute.Senses] = 10; npc.baseStart[(int)BaseAttribute.Memory] = 10;
             npc.BasePerLevel[(int)BaseAttribute.Strength] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Intellect] = new GameValue(0, 0);
             npc.BasePerLevel[(int)BaseAttribute.Endurance] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Wisdom] = new GameValue(0, 0);
             npc.BasePerLevel[(int)BaseAttribute.Agility] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Willpower] = new GameValue(0, 0);
-            npc.BasePerLevel[(int)BaseAttribute.Dexterity] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Charisma] = new GameValue(0, 0);
+            npc.BasePerLevel[(int)BaseAttribute.Speed] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Charisma] = new GameValue(0, 0);
             npc.BasePerLevel[(int)BaseAttribute.Senses] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Memory] = new GameValue(0, 0);
             npc.derivedPerLevel[(int)DerivedAttribute.Armor] = new GameValue(0, 0);
             npc.derivedPerLevel[(int)DerivedAttribute.Health] = new GameValue(1, 2); npc.derivedPerLevel[(int)DerivedAttribute.Stamina] = new GameValue(1, 1);
@@ -2336,12 +2172,12 @@ namespace Descension.Core
             npc.baseStart[(int)BaseAttribute.Strength] = 10; npc.baseStart[(int)BaseAttribute.Intellect] = 10;
             npc.baseStart[(int)BaseAttribute.Endurance] = 10; npc.baseStart[(int)BaseAttribute.Wisdom] = 10;
             npc.baseStart[(int)BaseAttribute.Agility] = 10; npc.baseStart[(int)BaseAttribute.Willpower] = 10;
-            npc.baseStart[(int)BaseAttribute.Dexterity] = 10; npc.baseStart[(int)BaseAttribute.Charisma] = 10;
+            npc.baseStart[(int)BaseAttribute.Speed] = 10; npc.baseStart[(int)BaseAttribute.Charisma] = 10;
             npc.baseStart[(int)BaseAttribute.Senses] = 10; npc.baseStart[(int)BaseAttribute.Memory] = 10;
             npc.BasePerLevel[(int)BaseAttribute.Strength] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Intellect] = new GameValue(0, 0);
             npc.BasePerLevel[(int)BaseAttribute.Endurance] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Wisdom] = new GameValue(0, 0);
             npc.BasePerLevel[(int)BaseAttribute.Agility] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Willpower] = new GameValue(0, 0);
-            npc.BasePerLevel[(int)BaseAttribute.Dexterity] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Charisma] = new GameValue(0, 0);
+            npc.BasePerLevel[(int)BaseAttribute.Speed] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Charisma] = new GameValue(0, 0);
             npc.BasePerLevel[(int)BaseAttribute.Senses] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Memory] = new GameValue(0, 0);
             npc.derivedPerLevel[(int)DerivedAttribute.Armor] = new GameValue(0, 0);
             npc.derivedPerLevel[(int)DerivedAttribute.Health] = new GameValue(12, 15); npc.derivedPerLevel[(int)DerivedAttribute.Stamina] = new GameValue(1, 1);

@@ -48,7 +48,7 @@ namespace Descension
 
         private void Update()
         {
-            if (Input.GetMouseButtonUp(1))
+            if (Input.GetKeyUp(KeyCode.Escape))
             {
                 if (isOpen == true)
                 {

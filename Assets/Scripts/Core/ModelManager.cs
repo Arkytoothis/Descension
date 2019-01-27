@@ -1,4 +1,5 @@
 ﻿using Descension.Characters;
+using Descension.Equipment;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,9 @@ namespace Descension.Core
         }
 
         private bool initialized = false;
+
+        [SerializeField] GameObject emptyPcPrefab = null;
+        public GameObject EmptyPcPrefab { get { return emptyPcPrefab; } }
 
         [SerializeField] List<GameObject> characterPrefabList = new List<GameObject>();
         [SerializeField] Dictionary<string, GameObject> characterPrefabs = new Dictionary<string, GameObject>();
@@ -58,6 +62,14 @@ namespace Descension.Core
                         beardPrefabs.Add(beardPrefabList[i].name, beardPrefabList[i]);
                     }
                 }
+
+                if (itemPrefabList.Count > 0)
+                {
+                    for (int i = 0; i < itemPrefabList.Count; i++)
+                    {
+                        itemPrefabs.Add(itemPrefabList[i].name, itemPrefabList[i]);
+                    }
+                }
             }
         }
 
@@ -65,13 +77,43 @@ namespace Descension.Core
         {
             GameObject model = Instantiate(characterPrefabs[pc.RaceKey + " " + pc.Gender.ToString()], parent);
 
+            CharacterRenderer renderer = model.GetComponent<CharacterRenderer>();
+            SpawnHairModel(pc, renderer.Mounts[(int)CharacterRenderSlot.Head]);
+            SpawnBeardModel(pc, renderer.Mounts[(int)CharacterRenderSlot.Face]);
+
+            SpawnItem(pc, renderer.Mounts[(int)CharacterRenderSlot.Right_Hand], (int)EquipmentSlot.Right_Hand);
+            SpawnItem(pc, renderer.Mounts[(int)CharacterRenderSlot.Left_Hand], (int)EquipmentSlot.Left_Hand);
+            SpawnItem(pc, renderer.Mounts[(int)CharacterRenderSlot.Head], (int)EquipmentSlot.Head);
+
             return model;
         }
 
         public void SpawnHairModel(PcData pc, Transform parent)
         {
-            GameObject hairObject = Instantiate(hairPrefabs[pc.Gender.ToString() + " " + pc.Hair], parent);
-            hairObject.name = pc.Gender.ToString() + " " + pc.Hair;
+            if (pc.Hair != "")
+            {
+                GameObject hairObject = Instantiate(hairPrefabs[pc.Gender.ToString() + " " + pc.Hair], parent);
+                hairObject.name = pc.Gender.ToString() + " " + pc.Hair;
+            }
+        }
+
+        public void SpawnBeardModel(PcData pc, Transform parent)
+        {
+            if (pc.Beard != "")
+            {
+                GameObject beardObject = Instantiate(beardPrefabs[pc.Beard], parent);
+                beardObject.name = pc.Gender.ToString() + " " + pc.Beard;
+            }
+        }
+
+        public void SpawnItem(PcData pcData, Transform parent, int equipmentSlot)
+        {
+            ItemData item = pcData.Inventory.EquippedItems[equipmentSlot];
+
+            if (item != null && itemPrefabs.ContainsKey(item.MeshKey))
+            {
+                GameObject itemObject = Instantiate(itemPrefabs[item.MeshKey], parent);
+            }
         }
     }
 }

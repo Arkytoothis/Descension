@@ -21,7 +21,6 @@ namespace Descension.Characters
     public class SkillDefinition
     {
         public SkillCategory Category;
-        public Skill key;
         public string Name;
         public string ShortName;
         public string Abbreviated;
@@ -29,11 +28,11 @@ namespace Descension.Characters
         public string AttributeUsed;
         public int Minimum;
         public int Maximum;
+        public int Index;
         public List<AbilityUnlock> AbilityUnlocks;
 
         public SkillDefinition()
         {
-            key = Skill.None;
             Name = "";
             ShortName = "";
             Abbreviated = "";
@@ -41,13 +40,14 @@ namespace Descension.Characters
             AttributeUsed = "";
             Minimum = 0;
             Maximum = 0;
+            Index = 0;
             AbilityUnlocks = new List<AbilityUnlock>();
         }
 
-        public SkillDefinition(SkillCategory category, Skill key, string name, string short_name, string abbreviated, string description, string attribute, int minimum, int maximum,
+        public SkillDefinition(SkillCategory category, Skill skill, string name, string short_name, string abbreviated, string description, string attribute, int minimum, int maximum,
             List<AbilityUnlock> list)
         {
-            this.key = key;
+            this.Index = (int)skill;
             Category = category;
             Name = name;
             ShortName = short_name;
@@ -67,7 +67,7 @@ namespace Descension.Characters
 
         public SkillDefinition(SkillDefinition def)
         {
-            key = def.key;
+            Index = def.Index;
             Category = def.Category;
             Name = def.Name;
             ShortName = def.ShortName;

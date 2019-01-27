@@ -14,8 +14,6 @@ namespace Descension
     public class TownManager : Singleton<TownManager>
     {
         [SerializeField] TownGuiManager guiManager = null;
-        [SerializeField] PcManager pcManager = null;
-        public PcManager PcManager { get { return pcManager; } }
 
         [SerializeField] QuestManager questManager = null;
         public QuestManager QuestManager { get { return questManager; } }
@@ -37,8 +35,8 @@ namespace Descension
 
         IEnumerator Initialize()
         {
-            Debug.Log("TownManager.Initialize()");
             Database.Initialize();
+            SpriteManager.instance.Initialize();
             LoadUnlocks();
 
             ItemGenerator.Initialize();
@@ -47,10 +45,18 @@ namespace Descension
 
             ModelManager.instance.Initialize();
 
-            pcManager.Initialize();
+            PcManager.instance.Initialize();
+            //PcManager.instance.Load();
+            PcManager.instance.Generate();
+
             questManager.Initialize();
 
+            PortraitRoom.instance.Initialize(PcManager.instance.PcDataList.Count);
+
             guiManager.Initialize(buildingObjects);
+
+            //AudioManager.instance.PlayMusic("Back Home", 0, 5f);
+            AudioManager.instance.PlayAmbient("Town Day");
 
             return null;
         }
@@ -108,8 +114,9 @@ namespace Descension
 
         public void StartAdventure()
         {
-            pcManager.Save();
+            PcManager.instance.Save();
             questManager.Save();
+
             SceneManager.LoadSceneAsync(2);
         }
     }

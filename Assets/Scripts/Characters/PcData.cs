@@ -18,7 +18,7 @@ namespace Descension.Characters
     public class PcDataList
     {
         public List<PcData> Pcs;
-
+         
         public PcDataList()
         {
             Pcs = new List<PcData>();
@@ -27,15 +27,13 @@ namespace Descension.Characters
 
     [System.Serializable]
     public class PcData : CharacterData
-    {
+    {   
         [SerializeField] UpkeepData upkeep;
         [SerializeField] int wealth;
         [SerializeField] PcStatus status;
 
-        [SerializeField] int encounterIndex;
-        [SerializeField] int worldIndex;
+        [SerializeField] int listIndex;
         [SerializeField] int partyIndex;
-        [SerializeField] int partySlot;
 
         [SerializeField] int level;
         [SerializeField] int experience;
@@ -50,10 +48,8 @@ namespace Descension.Characters
         public int Wealth { get { return wealth; } }
         public PcStatus Status { get { return status; } }
 
-        public int EncounterIndex { get { return encounterIndex; } }
-        public int WorldIndex { get { return worldIndex; } }
-        public int PartyIndex { get { return partyIndex; } }
-        public int PartySlot { get { return partySlot; } }
+        public int ListIndex { get { return listIndex; } set { listIndex = value; } }
+        public int PartyIndex { get { return partyIndex; } set { partyIndex = value; } }
 
         public int Level { get { return level; } }
         public int Experience { get { return experience; } }
@@ -77,8 +73,7 @@ namespace Descension.Characters
             professionKey = "";
             description = "";
 
-            encounterIndex = -1;
-            worldIndex = -1;
+            listIndex = -1;
             partyIndex = -1;
             hair = "Hair 01";
             beard = "";
@@ -101,11 +96,14 @@ namespace Descension.Characters
             for (int i = 0; i < (int)DamageType.Number; i++)
                 attributes.AddAttribute(AttributeListType.Resistance, new Attribute(AttributeType.Resistance, i, 0));
 
+            for (int i = 0; i < (int)Skill.Number; i++)
+                attributes.SetSkill(new Attribute(AttributeType.Skill, i, 0));
+
             abilities = new CharacterAbilities();
             inventory = new CharacterInventory();
         }
 
-        public PcData(FantasyName name, Gender gender, int level, string raceKey, string professionKey, string hair, string beard, int worldIndex, int encounterIndex, int partyIndex,
+        public PcData(FantasyName name, Gender gender, int level, string raceKey, string professionKey, string hair, string beard, int listIndex, int partyIndex,
             int power_slots, int spell_slots)
         {
             wealth = 0;
@@ -115,8 +113,7 @@ namespace Descension.Characters
             this.gender = gender;
             this.raceKey = raceKey;
             this.professionKey = professionKey;
-            this.worldIndex = worldIndex;
-            this.encounterIndex = encounterIndex;
+            this.listIndex = listIndex;
             this.partyIndex = partyIndex;
 
             this.hair = hair;
@@ -147,6 +144,9 @@ namespace Descension.Characters
                 attributes.AddAttribute(AttributeListType.Resistance, new Attribute(AttributeType.Resistance, i, 0));
             }
 
+            for (int i = 0; i < (int)Skill.Number; i++)
+                attributes.SetSkill(new Attribute(AttributeType.Skill, i, 0));
+
             abilities = new CharacterAbilities(this, power_slots, spell_slots);
             inventory = new CharacterInventory();
             faction = "Player";
@@ -162,10 +162,8 @@ namespace Descension.Characters
             background = new Background(pc.background);
             raceKey = pc.raceKey;
             professionKey = pc.professionKey;
-            worldIndex = pc.WorldIndex;
-            encounterIndex = pc.EncounterIndex;
+            listIndex = pc.listIndex;
             partyIndex = pc.PartyIndex;
-            partySlot = pc.PartySlot;
             hair = pc.hair;
             beard= pc.beard;
 
@@ -194,9 +192,9 @@ namespace Descension.Characters
                 attributes.AddAttribute(AttributeListType.Resistance, new Attribute(pc.attributes.GetAttribute(AttributeListType.Resistance, i)));
             }
 
-            foreach (KeyValuePair<Skill, Attribute> kvp in pc.GetSkills())
+            for (int i = 0; i < (int)Skill.Number; i++)
             {
-                attributes.AddSkill(kvp.Key, new Attribute(kvp.Value));
+                attributes.SetSkill(new Attribute(pc.attributes.GetSkill(i)));
             }
 
             abilities = new CharacterAbilities(pc);
@@ -210,23 +208,21 @@ namespace Descension.Characters
             {
                 int value = Database.GetProfession(professionKey).SkillProficiencies[j].Value;
                 int result = GameValue.Roll(new GameValue(1, 2), false) * value;
-                Skill key = Database.GetProfession(professionKey).SkillProficiencies[j].Skill;
+                int index = Database.Skills[(int)Database.GetProfession(professionKey).SkillProficiencies[j].Skill].Index;
 
-                Attribute skill = new Attribute();
-                skill.Type = AttributeType.Skill;
-                skill.SetStart(result, 0, 100);
-                attributes.AddSkill(key, skill);
+                Attribute skill = new Attribute(index, AttributeType.Skill, result, 0, 100);
+
+                attributes.SetSkill(skill);
             }
 
             for (int i = 0; i < Database.GetRace(raceKey).SkillProficiencies.Count; i++)
             {
                 int value = Database.GetRace(raceKey).SkillProficiencies[i].Value;
-                Skill key = Database.GetRace(raceKey).SkillProficiencies[i].Skill;
+                int index = Database.Skills[(int)Database.GetProfession(professionKey).SkillProficiencies[i].Skill].Index;
 
-                Attribute skill = new Attribute();
-                skill.Type = AttributeType.Skill;
-                skill.SetStart(value, 0, 100);
-                attributes.AddSkill(key, skill);
+                Attribute skill = new Attribute(index, AttributeType.Skill, value, 0, 100);
+
+                attributes.SetSkill(skill);
             }
 
             CalculateExpCosts();

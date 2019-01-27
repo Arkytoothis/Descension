@@ -10,8 +10,8 @@ namespace Descension.Characters
     [System.Serializable]
     public class AttributeManager
     {
-        private AttributeList[] lists;
-        private Dictionary<Skill, Attribute> skills;
+        [SerializeField] AttributeList[] lists;
+        [SerializeField] Attribute[] skills;
 
         public delegate void OnArmorChange(int current, int max);
         public delegate void OnHealthChange(int current, int max);
@@ -25,8 +25,6 @@ namespace Descension.Characters
         public event OnEssenceChange onEssenceChange;
         public event OnMoraleChange onMoraleChange;
 
-        public CharacterController controller;
-
         public AttributeManager()
         {
             lists = new AttributeList[(int)AttributeListType.Number];
@@ -36,7 +34,12 @@ namespace Descension.Characters
                 lists[i] = new AttributeList();
             }
 
-            skills = new Dictionary<Skill, Attribute>();
+            skills = new Attribute[(int)Skill.Number];
+
+            for (int i = 0; i < (int)Skill.Number; i++)
+            {
+                skills[i] = new Attribute();
+            }
         }
 
         public void ModifyAttribute(AttributeType type, int attribute, int value)
@@ -98,37 +101,31 @@ namespace Descension.Characters
             lists[(int)listType].Attributes[attribute].SetMax(value, true);
         }
 
-        public void AddSkill(Skill key, Attribute skill)
+        public void SetSkill(Attribute skill)
         {
-            if (skills.ContainsKey(key) == false)
-                skills.Add(key, skill);
-            else
-                skills[key].Current += skill.Current;
+            skills[skill.Index] = new Attribute(skill);
         }
 
-        public Attribute GetSkill(Skill skill)
+        public Attribute GetSkill(int index)
         {
-            if (skills.ContainsKey(skill) == true)
+            if (index >= 0 && index < skills.Length)
             {
-                return skills[skill];
+                return skills[index];
             }
             else
+            {
                 return null;
+            }
         }
 
-        public Dictionary<Skill, Attribute> GetSkills()
+        public Attribute[] GetSkills()
         {
             return skills;
         }
 
-        public int GetSkillValue(AttributeComponentType type, Skill skill)
+        public int GetSkillValue(int index)
         {
-            if (skills.ContainsKey(skill) == true)
-            {
-                return skills[skill].Get(type);
-            }
-            else
-                return 0;
+            return skills[index].Current;
         }
 
         private void ModifyAttributeInList(AttributeType type, int attribute, int value)

@@ -22,6 +22,8 @@ namespace Descension.Characters
 
         public static int MaxPowerSlots = 24;
         public static int MaxSpellSlots = 24;
+        public static int MaxTraitSlots = 24;
+
         public int PowerSlots;
         public int SpellSlots;
 
@@ -39,6 +41,7 @@ namespace Descension.Characters
 
             PowerSlots = 0;
             SpellSlots = 0;
+            MaxTraitSlots = 0;
 
             traits = new List<Ability>();
             availablePowers = new List<Ability>();
@@ -159,7 +162,7 @@ namespace Descension.Characters
 
             foreach (KeyValuePair<string, Ability> kvp in Database.Abilities)
             {
-                Attribute skill = pc.Attributes.GetSkill(kvp.Value.SkillUsed);
+                Attribute skill = pc.Attributes.GetSkill((int)kvp.Value.SkillUsed);
 
                 if (skill != null)
                 {

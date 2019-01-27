@@ -23,24 +23,17 @@ namespace Descension.Core
 
     public enum BaseAttribute
     {
-        Strength, Endurance, Agility, Dexterity, Senses, Intellect, Wisdom, Willpower, Charisma, Memory,
+        Strength, Endurance, Agility, Speed, Senses, Intellect, Wisdom, Willpower, Charisma, Memory,
         Number, None
     }
 
     public enum DerivedAttribute
     {
-        Actions, Armor, Health, Stamina, Essence, Morale,
+        Actions, Movement, Armor, Health, Stamina, Essence, Morale,
         Might_Attack, Might_Damage, Finesse_Attack, Finesse_Damage, Spell_Attack, Spell_Power,
         Block, Dodge, Parry, Resistance, Initiative, Perception, Concentration,
         Bonus_Actions, Duration_Modifier, Range_Modifier, 
         Fumble, Critical_Strike, Critical_Damage,
-        Health_Regen, Stamina_Regen, Essence_Regen,
-        Number, None
-    }
-
-    public enum Vital
-    {
-        Actions, Armor, Health, Stamina, Essence, Morale,
         Number, None
     }
 
@@ -52,12 +45,10 @@ namespace Descension.Core
 
     public enum Skill
     {
-        One_Hand_Melee, Two_hand_Melee, Polearms, Unarmed, Thrown, Archery, Firearms, Explosives,
+        Slashing_Weapons, Piercing_Weapons, Blunt_Weapons, Unarmed, Thrown, Archery, Firearms, Explosives,
         Light_Armor, Medium_Armor, Heavy_Armor, Bucklers, Shields, Leadership, Tactics,
-        Fire_Magic, Air_Magic, Water_Magic, Earth_Magic, Death_Magic, Life_Magic, Shadow_Magic, Arcane_Magic,
-        Alchemy, Enchanting, Lore, Channeling,
-        Stealth, Scouting, Tricks, Evasion, Devices, Persuasion,
-        Survival, Navigation, Training, Medicine,
+        Fire_Magic, Air_Magic, Water_Magic, Earth_Magic, Death_Magic, Life_Magic, Shadow_Magic, Arcane_Magic, Lore, Channeling,
+        Sneaking, Scouting, Tricks, Evasion, Devices, Persuasion, Survival, Medicine,
         Number, None
     }
 
@@ -259,7 +250,7 @@ namespace Descension.Core
 
     public enum MapType
     {
-        Outdoors, Indoors, Underground, Underwater,
+        Outdoors, Indoors, Underground,
         Number, None
     };
 

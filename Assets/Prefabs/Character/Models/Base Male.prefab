@@ -54,7 +54,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100002}
-  m_LocalRotation: {x: -0.7114842, y: -0.0017198666, z: -0.00039206556, w: 0.7026999}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.04532089, y: 0.039457243, z: -0.0092201615}
   m_LocalScale: {x: 0.99999994, y: 1, z: 0.9999998}
   m_Children: []
@@ -421,6 +421,7 @@ GameObject:
   - component: {fileID: 9500000}
   - component: {fileID: 11100000}
   - component: {fileID: 8758275432213372008}
+  - component: {fileID: 7213745885785880307}
   m_Layer: 0
   m_Name: Base Male
   m_TagString: Untagged
@@ -465,7 +466,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 46f111e7302520445ae490e6a8db704e, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -504,7 +505,7 @@ Animation:
   - {fileID: 7400038, guid: 063bad66f847e894287b0b98297b4853, type: 3}
   - {fileID: 7400040, guid: 063bad66f847e894287b0b98297b4853, type: 3}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!114 &8758275432213372008
@@ -547,6 +548,20 @@ MonoBehaviour:
   - {fileID: 13700012}
   - {fileID: 13700010}
   - {fileID: 13700006}
+--- !u!136 &7213745885785880307
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100030}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.2
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.55, z: 0}
 --- !u!1 &100032
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,11 +14,11 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Walkable
+  - Obstacle
+  - Pc
+  - Enemy
+  - Npc
   - 
   - 
   - 

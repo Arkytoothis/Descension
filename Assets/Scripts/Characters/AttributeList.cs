@@ -7,7 +7,7 @@ namespace Descension.Characters
     [System.Serializable]
     public class AttributeList
     {
-        private List<Attribute> attributes;
+        [SerializeField] List<Attribute> attributes;
 
         public List<Attribute> Attributes { get { return attributes; } }
 
@@ -20,7 +20,7 @@ namespace Descension.Characters
         {
             for (int i = 0; i < attributes.Count; i++)
             {
-                this.attributes.Add(attributes[i]);
+                this.attributes.Add(attributes[i]); 
             }
         }
 

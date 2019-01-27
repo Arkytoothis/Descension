@@ -8,16 +8,17 @@ namespace Descension.Characters
     [System.Serializable]
     public class Attribute
     {
-        public AttributeType Type;
-        public int Index;
-        private int start;
-        private int current;
-        private int modifier;
-        private int minimum;
-        private int maximum;
-        private int spent;
-        private int expCost;
+        [SerializeField] AttributeType type;
+        [SerializeField] int start;
+        [SerializeField] int current;
+        [SerializeField] int modifier;
+        [SerializeField] int minimum;
+        [SerializeField] int maximum;
+        [SerializeField] int spent;
+        [SerializeField] int expCost;
+        [SerializeField] int index;
 
+        public AttributeType Type { get { return type; } }
         public int Start { get { return start; } }
         public int Current { set { current = value; } get { return current; } }
         public int Modifier { get { return modifier; } }
@@ -25,13 +26,14 @@ namespace Descension.Characters
         public int Maximum { get { return maximum; } }
         public int Spent { get { return spent; } }
         public int ExpCost { get { return expCost; } }
+        public int Index { get { return index; } set { index = value; } }
 
         public int ExpModifier;
 
         public Attribute()
         {
-            Type = AttributeType.None;
-            Index = 0;
+            type = AttributeType.None;
+            index = 0;
             start = 0;
             current = 0;
             modifier = 0;
@@ -42,10 +44,23 @@ namespace Descension.Characters
             ExpModifier = 0;
         }
 
+        public Attribute(int index, AttributeType type, int start, int minimum, int maximum)
+        {
+            this.type = type;
+            this.index = index;
+            current = 0;
+            modifier = 0;
+            spent = 0;
+            expCost = 0;
+            ExpModifier = 0;
+
+            SetStart(start, minimum, maximum);
+        }
+
         public Attribute(AttributeType type, int index, int exp_mod)
         {
-            Type = type;
-            Index = index;
+            this.type = type;
+            this.index = index;
             start = 0;
             current = 0;
             modifier = 0;
@@ -54,24 +69,24 @@ namespace Descension.Characters
             spent = 0;
             ExpModifier = exp_mod;
         }
-        public Attribute(Attribute c)
+        public Attribute(Attribute attribute)
         {
-            Type = c.Type;
-            Index = c.Index;
-            start = c.start;
-            current = c.current;
-            modifier = c.modifier;
-            minimum = c.minimum;
-            maximum = c.maximum;
-            spent = c.spent;
-            expCost = c.expCost;
-            ExpModifier = c.ExpModifier;
+            type = attribute.Type;
+            index = attribute.Index;
+            start = attribute.start;
+            current = attribute.current;
+            modifier = attribute.modifier;
+            minimum = attribute.minimum;
+            maximum = attribute.maximum;
+            spent = attribute.spent;
+            expCost = attribute.expCost;
+            ExpModifier = attribute.ExpModifier;
         }
 
         public Attribute(AttributeType type, int index, int start, int current, int modifier, int minimum, int maximum, int exp_mod)
         {
-            Type = type;
-            Index = index;
+            this.type = type;
+            this.index = index;
             this.start = start;
             this.current = current;
             this.modifier = modifier;
@@ -91,10 +106,11 @@ namespace Descension.Characters
         public void SetStart(int start, int min, int max)
         {
             this.start = start;
-            this.minimum = min;
-            this.maximum = max;
-            this.current = start;
-            this.spent = 0;
+            minimum = min;
+            maximum = max;
+            current = start;
+            spent = 0;
+
             Check();
         }
 

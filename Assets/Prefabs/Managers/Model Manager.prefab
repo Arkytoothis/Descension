@@ -44,16 +44,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterPrefabList:
-  - {fileID: 100124, guid: d3f81e1843de63a4c8b56ea61df3c2ac, type: 3}
-  - {fileID: 100030, guid: 05f1c5dcb70c52841814fe2acce8582c, type: 3}
-  - {fileID: 100124, guid: 935911ad84b8e6446861b5fb0058416a, type: 3}
-  - {fileID: 100030, guid: 1f7e52e31f4d07a4a904600adb30e6a2, type: 3}
-  - {fileID: 100124, guid: 20ddddda3f0683a4a910dc2f95d96eb1, type: 3}
-  - {fileID: 100030, guid: 6e93d845b89665f46b1f310dc85c79c2, type: 3}
-  - {fileID: 100124, guid: bd18ae0447dcc6248b77fa9b6783e3e9, type: 3}
-  - {fileID: 100030, guid: c41cb27f1ea937242ab85698ffc7297d, type: 3}
-  - {fileID: 100124, guid: d7ba7f923eb7687478441ee2a9065295, type: 3}
-  - {fileID: 100030, guid: b5dda001639390149a7df6cdf0994441, type: 3}
+  - {fileID: 1953236250752811417, guid: 5d7d1faf9c17d694dac6dc3431725447, type: 3}
+  - {fileID: 6567175782741119392, guid: c0aceabe26d3c2b45b057af3e4b1912a, type: 3}
+  - {fileID: 7974761053577151243, guid: 72dd27538d52d6f44be688d52e976601, type: 3}
+  - {fileID: 4660893722568893474, guid: 020746539d844ab4d843169f39e6ee37, type: 3}
+  - {fileID: 6001761742179829253, guid: 39defde8f882d0842a4a615e341c9593, type: 3}
+  - {fileID: 965086847972673596, guid: 22afa1aed1610d04aa43e6463df6f832, type: 3}
+  - {fileID: 5036652129840361054, guid: 8c91005898b38a54bab7b839b857cafd, type: 3}
+  - {fileID: 1033419736889345112, guid: 71b55a11ca02e8044bf5a3f18a98c3d0, type: 3}
+  - {fileID: 3277581220422567231, guid: c0fd7a380c47ea9438291831603f0231, type: 3}
+  - {fileID: 7455092530469663807, guid: 85e78688272202b4793b8047dc2147b8, type: 3}
   itemPrefabList: []
   hairPrefabList:
   - {fileID: 100000, guid: 3b4f0a78d9cc8de45ac1b1a5d41f1fc5, type: 3}

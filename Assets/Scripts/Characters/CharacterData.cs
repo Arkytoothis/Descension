@@ -74,14 +74,9 @@ namespace Descension.Characters
             return attributes.GetAttribute(AttributeListType.Derived, attribute);
         }
 
-        public Attribute GetSkill(Skill skill)
+        public Attribute GetSkill(int index)
         {
-            return attributes.GetSkill(skill);
-        }
-
-        public Dictionary<Skill, Attribute> GetSkills()
-        {
-            return attributes.GetSkills();
+            return attributes.GetSkill(index);
         }
 
         public Attribute GetResistance(int attribute)

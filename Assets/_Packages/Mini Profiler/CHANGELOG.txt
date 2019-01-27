@@ -1,0 +1,27 @@
+Changelog
+==============================================================================
+
+Version 2.2
+------------------------------------------------------------------------------
+* Graphic huge performance improvement
+* More precise average value calculation
+* Smaller texture
+
+Version 2.1
+------------------------------------------------------------------------------
+* Several performance improvements.
+* Changed to new Unity UI. Better, faster and more configurable (suggestion by
+Roger Domenech (@UChlab)).
+* Visible property renamed to Collapsed. This is more straightforward, since
+the panel wasn't really "invisible" when collapsed. Note that the property
+state meaining is inverted.
+* Keyboard shortcut is now a Component.
+* Removed the Continue Watching on Collapsed property. This was a minor
+feature highly unused.
+* Removed Mini Profiler Container. Instead, now you can use any Unity's Layout
+Group component like Vertical or Horizontal Layout Group. Remember to unset
+the Child Force Expand Height property to make the collapse work properly.
+
+Version 1.0
+------------------------------------------------------------------------------
+Initial release

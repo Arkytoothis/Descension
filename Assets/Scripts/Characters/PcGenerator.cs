@@ -20,7 +20,7 @@ namespace Descension.Characters
 
         static bool initialized = false;
 
-        static bool ignoreUnlocks = false;
+        //static bool ignoreUnlocks = false;
 
         public static void Initialize()
         {
@@ -69,7 +69,7 @@ namespace Descension.Characters
             }
         }
 
-        public static PcData Generate(int index, Gender gender, string r, string p)
+        public static PcData Generate(int listIndex, Gender gender, string r, string p)
         {
             //if (availableRaces == null || availableProfessions == null) return null;
 
@@ -92,31 +92,45 @@ namespace Descension.Characters
                 if (Random.Range(0, 100) < 50)
                 {
                     gender = Gender.Male;
-                    hair = race.maleDefaultHair;
-                    beard = race.maleDefaultBeard;
+
+                    if (race.maleDefaultHair != "")
+                        hair = "Hair " + Random.Range(1, 9);
+
+                    if (race.maleDefaultBeard != "" && Random.Range(0, 100) < 50)
+                        beard = "Beard " + Random.Range(1, 8);
                 }
                 else
                 {
                     gender = Gender.Female;
-                    hair = race.femaleDefaultHair;
+
+                    if (race.femaleDefaultHair != "")
+                        hair = "Hair " + Random.Range(1, 17);
+
                     beard = race.femaleDefaultBeard;
                 }
             }
             else if (gender == Gender.Male)
             {
                 gender = Gender.Male;
-                hair = race.maleDefaultHair;
-                beard = race.maleDefaultBeard;
+
+                if(race.maleDefaultHair != "")
+                    hair = "Hair " + Random.Range(1, 9);
+
+                if (race.maleDefaultBeard != "" && Random.Range(0, 100) < 50)
+                    beard = "Beard " + Random.Range(1, 8);
             }
             else if (gender == Gender.Female)
             {
                 gender = Gender.Female;
-                hair = race.femaleDefaultHair;
+
+                if (race.femaleDefaultHair != "")
+                    hair = "Hair " + Random.Range(1, 17);
+
                 beard = race.femaleDefaultBeard;
             }
 
             PcData pc = new PcData(NameGenerator.Get(gender, race_key, professionKey),
-                gender, 1, race_key, professionKey, hair, beard, index, index, index,
+                gender, 1, race_key, professionKey, hair, beard, listIndex, -1,
                 3 + GameValue.Roll(new GameValue(1, 3), false), 3 + GameValue.Roll(new GameValue(1, 3), false));
 
             pc.Background = BackgroundGenerator.Generate();

@@ -1,0 +1,174 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4438497678398972673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4438497678398972672}
+  - component: {fileID: 4438497678398972685}
+  - component: {fileID: 4438497678398972674}
+  - component: {fileID: 4438497678398972675}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4438497678398972672
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4438497678398972673}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.7642125, y: -2.757209, z: -0.0729146}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4438497678398972685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4438497678398972673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e8bb653a324dc439c4d246adaf2fe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4438497678398972674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4438497678398972673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: def78c44840c6694c9e7eb3220511cb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4438497678398972675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4438497678398972673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17543a20729b1024faa97e53ea0584f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicGroups:
+  - groupID: Along the Journey
+    group:
+    - {fileID: 8300000, guid: 265b008c0ef0f034cb9c921abc2d28a2, type: 3}
+    - {fileID: 8300000, guid: 081a2997e3b3bcc44b21b560576a76fb, type: 3}
+    - {fileID: 8300000, guid: cbd239e109cb39c4f9bf021adc64ac2c, type: 3}
+  - groupID: Ascension
+    group:
+    - {fileID: 8300000, guid: 3b2464cffd9baef44aa882d55f89a102, type: 3}
+    - {fileID: 8300000, guid: 7e2287bf315196e40a941adf0ba19fff, type: 3}
+    - {fileID: 8300000, guid: 17ca5d52cb369e14e9091651883c6019, type: 3}
+  - groupID: Back Home
+    group:
+    - {fileID: 8300000, guid: 8c391e80ad927d0479163cc7959cfbd3, type: 3}
+    - {fileID: 8300000, guid: 89ec15532b9fddb42aec0c27f8d47afd, type: 3}
+    - {fileID: 8300000, guid: 22c56a9df7d3e9344810d172ac0ec500, type: 3}
+  - groupID: Caves of Madness
+    group:
+    - {fileID: 8300000, guid: 8fa76e2490ef2de4793f1ba54d247fd1, type: 3}
+    - {fileID: 8300000, guid: 2d307afa63c02994e8342ab33fc16b87, type: 3}
+    - {fileID: 8300000, guid: 7c7fa80343d75b14483d9ff0ad9f2ba7, type: 3}
+  - groupID: The Overwhelming Peaks
+    group:
+    - {fileID: 8300000, guid: 337ee85590a5aae459e1326a13fd72b1, type: 3}
+    - {fileID: 8300000, guid: d8da80843bde9dc4783e69b043c5ca73, type: 3}
+    - {fileID: 8300000, guid: 5f48a7da8b710cb44830b0f1bac37f62, type: 3}
+  - groupID: Warrior Souls
+    group:
+    - {fileID: 8300000, guid: 18fc58d6228a60847867ca6eaeaf45bd, type: 3}
+    - {fileID: 8300000, guid: ad9fc7dcd4026244abc4dbdd2a2c12b3, type: 3}
+    - {fileID: 8300000, guid: 6357c0bba5c34c7458d8ce92becb7860, type: 3}
+  ambientGroups:
+  - groupID: Castle Abandoned
+    group:
+    - {fileID: 8300000, guid: ae6138bcc41f19e4e848b3c9fff991d0, type: 3}
+  - groupID: Campground
+    group:
+    - {fileID: 8300000, guid: 385898cb0ee74a741a4fd38f786ce835, type: 3}
+  - groupID: Dragons Lair
+    group:
+    - {fileID: 8300000, guid: c9ab09f8e7865ca4c89c5d1e70e5deef, type: 3}
+  - groupID: Forest Night
+    group:
+    - {fileID: 8300000, guid: 533c7843880a88247b920b952c7d94cc, type: 3}
+  - groupID: Tavern Instrumental Diegetic
+    group:
+    - {fileID: 8300000, guid: 49e8a909d3c840b498003671208a47f3, type: 3}
+  - groupID: Town Day
+    group:
+    - {fileID: 8300000, guid: 7241b0273a3a47645bfc80de11f08234, type: 3}
+  effectGroups:
+  - groupID: Attack 01
+    group:
+    - {fileID: 8300000, guid: a1a7c0fa93bf7bd4aa13048df2673ec2, type: 3}
+  - groupID: Bow 01
+    group:
+    - {fileID: 8300000, guid: 3b159744303468e4c82a2797f19c5683, type: 3}
+  - groupID: CutFlesh 01
+    group:
+    - {fileID: 8300000, guid: a5160a7a17c88c24da24a64edb5d7810, type: 3}
+  - groupID: Fire 01
+    group:
+    - {fileID: 8300000, guid: 8796f9bd93b9667488f75ff45eae4b07, type: 3}
+  - groupID: Heal 01
+    group:
+    - {fileID: 8300000, guid: 3db5f10803225db44a4945b95ed8c868, type: 3}
+  uiGroups:
+  - groupID: Button 01
+    group:
+    - {fileID: 8300000, guid: 72bd66118d814c24fb6410c4ca541a89, type: 3}
+  - groupID: Button 02
+    group:
+    - {fileID: 8300000, guid: d0d769440cf84bc47b0f6e679547427c, type: 3}
+  - groupID: Button 03
+    group:
+    - {fileID: 8300000, guid: 5d05af6b0c1a38941b1e19c2ea19933a, type: 3}
+  - groupID: Button 04
+    group:
+    - {fileID: 8300000, guid: 96fc06d12f22929438d39aaff47b98b0, type: 3}
+  - groupID: Button 05
+    group:
+    - {fileID: 8300000, guid: dac8b43e17f21704891533601f1c6962, type: 3}
+  - groupID: Button 06
+    group:
+    - {fileID: 8300000, guid: d464ba83963f3f6458f0b2893ce63273, type: 3}
+  - groupID: Page Turn
+    group:
+    - {fileID: 8300000, guid: f57cc0857957e38438fe406cefe1377a, type: 3}
+    - {fileID: 8300000, guid: e0d55847dcda7ce44a00d7841d77f478, type: 3}
+    - {fileID: 8300000, guid: ed801435fe6a4a642a84d3050c6607fa, type: 3}
+  voiceGroups:
+  - groupID: Male Negative 01
+    group:
+    - {fileID: 8300000, guid: 7610f9d42cc485041a719c4e93a84a5c, type: 3}
+  - groupID: Male Affirmative 01
+    group:
+    - {fileID: 8300000, guid: caa224f3e478a0e4abcc6c26c1fcfa17, type: 3}
+  - groupID: Male Attack 01
+    group:
+    - {fileID: 8300000, guid: c07824ecdc0990f48a18d55aee9d4de2, type: 3}
+  - groupID: Male Question 01
+    group:
+    - {fileID: 8300000, guid: 5713e9f27916d31489cc067a981fa52e, type: 3}

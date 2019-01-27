@@ -6,6 +6,6 @@ namespace Descension
 {
     public class AdventureMap : MonoBehaviour
     {
-        [SerializeField] MapData mapData = null;
+        //[SerializeField] MapData mapData = null;
     }
 }
