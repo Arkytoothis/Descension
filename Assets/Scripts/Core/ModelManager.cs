@@ -18,8 +18,14 @@ namespace Descension.Core
         [SerializeField] GameObject emptyPcPrefab = null;
         public GameObject EmptyPcPrefab { get { return emptyPcPrefab; } }
 
+        [SerializeField] GameObject emptyNpcPrefab = null;
+        public GameObject EmptyNpcPrefab { get { return emptyNpcPrefab; } }
+
         [SerializeField] List<GameObject> characterPrefabList = new List<GameObject>();
         [SerializeField] Dictionary<string, GameObject> characterPrefabs = new Dictionary<string, GameObject>();
+
+        [SerializeField] List<GameObject> npcPrefabList = new List<GameObject>();
+        [SerializeField] Dictionary<string, GameObject> npcPrefabs = new Dictionary<string, GameObject>();
 
         [SerializeField] List<GameObject> itemPrefabList = new List<GameObject>();
         [SerializeField] Dictionary<string, GameObject> itemPrefabs = new Dictionary<string, GameObject>();
@@ -44,6 +50,14 @@ namespace Descension.Core
                     for (int i = 0; i < characterPrefabList.Count; i++)
                     {
                         characterPrefabs.Add(characterPrefabList[i].name, characterPrefabList[i]);
+                    }
+                }
+
+                if (npcPrefabList.Count > 0)
+                {
+                    for (int i = 0; i < npcPrefabList.Count; i++)
+                    {
+                        npcPrefabs.Add(npcPrefabList[i].name, npcPrefabList[i]);
                     }
                 }
 
@@ -86,6 +100,14 @@ namespace Descension.Core
             SpawnItem(pc, renderer.Mounts[(int)CharacterRenderSlot.Head], (int)EquipmentSlot.Head);
 
             return model;
+        }
+
+        public GameObject SpawnNpcModel(NpcData npc)
+        {
+            GameObject baseObject = Instantiate(emptyNpcPrefab);
+            GameObject model = Instantiate(npcPrefabs[npc.Model], baseObject.transform);
+
+            return baseObject;
         }
 
         public void SpawnHairModel(PcData pc, Transform parent)

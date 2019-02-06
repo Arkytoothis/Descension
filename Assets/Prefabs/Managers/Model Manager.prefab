@@ -43,6 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ab281de2587a844bdb98e6903c77e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emptyPcPrefab: {fileID: 0}
+  emptyNpcPrefab: {fileID: 0}
   characterPrefabList:
   - {fileID: 1953236250752811417, guid: 5d7d1faf9c17d694dac6dc3431725447, type: 3}
   - {fileID: 6567175782741119392, guid: c0aceabe26d3c2b45b057af3e4b1912a, type: 3}
@@ -54,6 +56,10 @@ MonoBehaviour:
   - {fileID: 1033419736889345112, guid: 71b55a11ca02e8044bf5a3f18a98c3d0, type: 3}
   - {fileID: 3277581220422567231, guid: c0fd7a380c47ea9438291831603f0231, type: 3}
   - {fileID: 7455092530469663807, guid: 85e78688272202b4793b8047dc2147b8, type: 3}
+  npcPrefabList:
+  - {fileID: 100080, guid: 6a7ccc6d2a0d6ff4eb44eef2eabb1fb6, type: 3}
+  - {fileID: 100000, guid: a1a92d70a190021429af19c05003a453, type: 3}
+  - {fileID: 100082, guid: c21b552dd093d7745b5f1c36c7f1a027, type: 3}
   itemPrefabList: []
   hairPrefabList:
   - {fileID: 100000, guid: 3b4f0a78d9cc8de45ac1b1a5d41f1fc5, type: 3}

@@ -14,14 +14,12 @@ namespace Descension.Characters
     {
         public FantasyName name;
         public Gender gender;
-
         public Species species;
         public BodySize size;
 
         public string key;
-        public string raceKey;
-        public string professionKey;
-        public string faction;
+        public string model;
+        public Faction faction;
 
         public List<int> baseStart;
         public List<GameValue> BasePerLevel;
@@ -33,7 +31,6 @@ namespace Descension.Characters
         public List<int> skillStart;
         public List<GameValue> skillPerLevel;
 
-        public int baseSpeed;
         public int minLevel;
         public int maxLevel;
         public int expPerLevel;
@@ -41,15 +38,6 @@ namespace Descension.Characters
         public List<Ability> abilities;
         public CharacterInventory inventory;
 
-        public string maleDefaultHair;
-        public string maleDefaultBeard;
-        public string femaleDefaultHair;
-        public string femaleDefaultBeard;
-
-        public int maxAccessories;
-
-        public string description;
-        public string background;
 
         public NPCDefinition()
         {
@@ -57,27 +45,12 @@ namespace Descension.Characters
             gender = Gender.None;
             species = Species.None;
             size = BodySize.None;
-
+            faction = Faction.None;
             key = "";
-            raceKey = "";
-            professionKey = "";
-            description = "";
-            background = "";
-
-            maleDefaultHair = "";
-            maleDefaultBeard = "";
-            femaleDefaultHair = "";
-            femaleDefaultBeard = "";
-
-            maxAccessories = 1;
-
-            description = "";
-            background = "";
-
+            model = "";
             minLevel = 0;
             maxLevel = 0;
             expPerLevel = 0;
-            baseSpeed = 0;
 
             baseStart = new List<int>();
             BasePerLevel = new List<GameValue>();
@@ -94,28 +67,19 @@ namespace Descension.Characters
             inventory = new CharacterInventory();
         }
 
-        public NPCDefinition(FantasyName name, Species species, BodySize size, Gender gender, string key, string race, string profession, string faction,
-            int min_level, int max_level, int exp_pre_level, int movement, string maleHair, string maleBeard, string femaleHair, string femaleBeard)
+        public NPCDefinition(FantasyName name, Species species, BodySize size, Gender gender, string key, string model, Faction faction,
+            int minLevel, int maxLevel, int expPerLevel)
         {
             this.name = name;
             this.species = species;
             this.size = size;
-            this.key = key;
             this.gender = gender;
+            this.key = key;
+            this.model = model;
             this.faction = faction;
-            raceKey = race;
-            professionKey = profession;
-            maleDefaultHair = maleHair;
-            maleDefaultBeard = maleBeard;
-            femaleDefaultHair = femaleHair;
-            femaleDefaultBeard = femaleBeard;
-
-            maxAccessories = Random.Range(1, 4);
-
-            minLevel = min_level;
-            maxLevel = max_level;
-            expPerLevel = exp_pre_level;
-            baseSpeed = movement;
+            this.minLevel = minLevel;
+            this.maxLevel = maxLevel;
+            this.expPerLevel = expPerLevel;
 
             baseStart = new List<int>();
             BasePerLevel = new List<GameValue>();
@@ -149,14 +113,6 @@ namespace Descension.Characters
 
             abilities = new List<Ability>();
             inventory = new CharacterInventory();
-        }
-
-        public void CalculateDerived()
-        {
-            for (int i = 0; i < (int)DerivedAttribute.Number; i++)
-            {
-
-            }
         }
     }
 }

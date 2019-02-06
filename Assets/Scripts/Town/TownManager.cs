@@ -42,7 +42,7 @@ namespace Descension
             ItemGenerator.Initialize();
             PcGenerator.Initialize();
             QuestGenerator.Initialize();
-
+            StockpileManager.instance.Initialize();
             ModelManager.instance.Initialize();
 
             PcManager.instance.Initialize();
@@ -56,7 +56,7 @@ namespace Descension
             guiManager.Initialize(buildingObjects);
 
             //AudioManager.instance.PlayMusic("Back Home", 0, 5f);
-            AudioManager.instance.PlayAmbient("Town Day");
+            AudioManager.instance.PlayAmbient("Town Day", true);
 
             return null;
         }

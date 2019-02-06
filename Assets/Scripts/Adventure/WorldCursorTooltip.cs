@@ -9,44 +9,39 @@ namespace Descension
 {
     public class WorldCursorTooltip : Singleton<WorldCursorTooltip>
     {
-        [SerializeField] TMP_Text distanceLabel = null;
-        [SerializeField] TMP_Text actionsLabel = null;
-        [SerializeField] TMP_Text attackLabel = null;
+        [SerializeField] TMP_Text nameLabel = null;
+        [SerializeField] TMP_Text positionLabel = null;
+        [SerializeField] TMP_Text detailsLabel = null;
 
         private void Awake()
         {
             Reload();
         }
 
-        private void LateUpdate()
-        {
-            if (EventSystem.current.IsPointerOverGameObject() == false)
-            {
-                transform.position = new Vector3(Input.mousePosition.x + 50, Input.mousePosition.y, 0);
-            }
-            else
-            {
-                transform.position = new Vector3(-1000, -1000, 0);
-            }
-        }
+        //private void LateUpdate()
+        //{
+        //    if (EventSystem.current.IsPointerOverGameObject() == false)
+        //    {
+        //        transform.position = new Vector3(Input.mousePosition.x + 50, Input.mousePosition.y, 0);
+        //    }
+        //    else
+        //    {
+        //        transform.position = new Vector3(-1000, -1000, 0);
+        //    }
+        //}
 
-        public void UpdateDistance(string distance)
+        public void UpdateText(string name, string position, string details)
         {
-            distanceLabel.text = distance;
-        }
-
-        public void UpdateText(string distance, string actions, string attack)
-        {
-            distanceLabel.text = distance;
-            actionsLabel.text = actions;
-            attackLabel.text = attack;
+            nameLabel.text = name;
+            positionLabel.text = position;
+            detailsLabel.text = details;
         }
 
         public void Clear()
         {
-            distanceLabel.text = "";
-            actionsLabel.text = "";
-            attackLabel.text = "";
+            nameLabel.text = "";
+            positionLabel.text = "";
+            detailsLabel.text = "";
         }
     }
 }

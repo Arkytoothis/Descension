@@ -14,22 +14,15 @@ namespace Descension
             {
                 ConstructPc(parent, pc);
             }
-
-            AdventureManager.instance.SelectPc(0);
         }
 
         public void ConstructPc(Transform parent, PcData pcData)
         {
-            int index = PcManager.instance.PcObjects.Count;
-            Vector3 spawnPosition = transform.position + new Vector3((index % 2) - 0.5f, 0.01f, -(index / 2) + 0.5f);
-
-            GameObject baseObject = Instantiate(ModelManager.instance.EmptyPcPrefab, parent);
-            baseObject.transform.SetParent(parent);
-            baseObject.transform.position = spawnPosition;
-
+            int index = EncounterRoom.instance.PcObjects.Count;
+            GameObject baseObject = Instantiate(ModelManager.instance.EmptyPcPrefab);
             GameObject model = ModelManager.instance.SpawnCharacterModel(pcData, baseObject.transform);
 
-            PcManager.instance.AddPcObject(baseObject);
+            EncounterRoom.instance.AddPc(baseObject, index);
         }
     }
 }

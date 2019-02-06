@@ -19,8 +19,8 @@ TagManager:
   - Pc
   - Enemy
   - Npc
-  - 
-  - 
+  - PlayerParty
+  - NpcParty
   - 
   - 
   - 

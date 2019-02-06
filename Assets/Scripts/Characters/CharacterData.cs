@@ -19,7 +19,7 @@ namespace Descension.Characters
         [SerializeField] protected string description;
         [SerializeField] protected string raceKey;
         [SerializeField] protected string professionKey;
-        [SerializeField] protected string faction;
+        [SerializeField] protected Faction faction;
         [SerializeField] protected string hair;
         [SerializeField] protected string beard;
 
@@ -31,6 +31,11 @@ namespace Descension.Characters
         [SerializeField] protected bool isDrained = false;
         [SerializeField] protected bool isBroken = false;
 
+        [SerializeField] protected int initiativeIndex = 0;
+
+        [SerializeField] protected int xCell = 0;
+        [SerializeField] protected int yCell = 0;
+
         protected CharacterData()
         {
         }
@@ -39,7 +44,7 @@ namespace Descension.Characters
         public Gender Gender { get { return gender; } }
         public Background Background { get { return background; } set { background = value; } }
         public CharacterPersonality Personality { get { return personality; } set { personality = value; } }
-        public string Faction { get { return faction; } }
+        public Faction Faction { get { return faction; } }
         public Species Species { get { return species; } }
         public BodySize Size { get { return size; } }
         public string RaceKey { get { return raceKey; } }
@@ -53,6 +58,10 @@ namespace Descension.Characters
         public bool IsExhausted { get { return isExhausted; } }
         public bool IsDrained { get { return isDrained; } }
         public bool IsBroken { get { return isBroken; } }
+
+        public int InitiativeIndex { get => initiativeIndex; set => initiativeIndex = value; }
+        public int XCell { get => xCell; set => xCell = value; }
+        public int YCell { get => yCell; set => yCell = value; }
 
         public void SetIsDead(bool isDead)
         {

@@ -114,9 +114,12 @@ namespace Descension
             PlayEffect(library.GetEffectFromName(soundName), pos);
         }
 
-        public void PlayAmbient(string ambientName)
+        public void PlayAmbient(string ambientName, bool loop)
         {
-            ambientSource.PlayOneShot(library.GetAmbientFromName(ambientName), ambientVolumePercent * masterVolumePercent);
+            ambientSource.clip = library.GetAmbientFromName(ambientName);
+            ambientSource.volume = ambientVolumePercent * masterVolumePercent;
+            ambientSource.loop = loop;
+            ambientSource.Play();
         }
 
         public void PlayUI(AudioClip clip)

@@ -2122,8 +2122,7 @@ namespace Descension.Core
 
         public static void LoadNPCs()
         {
-            NPCDefinition npc = new NPCDefinition(new FantasyName("Giant Rat", "", ""), Species.Animal, BodySize.Small, Gender.Either, "giant_rat", "", "",
-                "Enemy", 1, 2, 10, 10, "", "", "", "");
+            NPCDefinition npc = new NPCDefinition(new FantasyName("Skeleton", "", "Warrior"), Species.Undead, BodySize.Small, Gender.Either, "Skeleton Warrior 01", "Skeleton Warrior 01", Faction.Enemy, 1, 3, 20);
             npc.baseStart[(int)BaseAttribute.Strength] = 10; npc.baseStart[(int)BaseAttribute.Intellect] = 10;
             npc.baseStart[(int)BaseAttribute.Endurance] = 10; npc.baseStart[(int)BaseAttribute.Wisdom] = 10;
             npc.baseStart[(int)BaseAttribute.Agility] = 10; npc.baseStart[(int)BaseAttribute.Willpower] = 10;
@@ -2135,30 +2134,7 @@ namespace Descension.Core
             npc.BasePerLevel[(int)BaseAttribute.Speed] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Charisma] = new GameValue(0, 0);
             npc.BasePerLevel[(int)BaseAttribute.Senses] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Memory] = new GameValue(0, 0);
             npc.derivedPerLevel[(int)DerivedAttribute.Armor] = new GameValue(0, 0);
-            npc.derivedPerLevel[(int)DerivedAttribute.Health] = new GameValue(1, 2); npc.derivedPerLevel[(int)DerivedAttribute.Stamina] = new GameValue(1, 1);
-            npc.derivedPerLevel[(int)DerivedAttribute.Essence] = new GameValue(0, 1); npc.derivedPerLevel[(int)DerivedAttribute.Morale] = new GameValue(0, 0);
-            npc.derivedPerLevel[(int)DerivedAttribute.Might_Attack] = new GameValue(0, 0); npc.derivedPerLevel[(int)DerivedAttribute.Finesse_Attack] = new GameValue(0, 0);
-            npc.derivedPerLevel[(int)DerivedAttribute.Block] = new GameValue(0, 0); npc.derivedPerLevel[(int)DerivedAttribute.Dodge] = new GameValue(0, 0);
-            npc.derivedPerLevel[(int)DerivedAttribute.Parry] = new GameValue(0, 0); npc.derivedPerLevel[(int)DerivedAttribute.Initiative] = new GameValue(0, 0);
-            npc.derivedPerLevel[(int)DerivedAttribute.Critical_Strike] = new GameValue(0, 0); npc.derivedPerLevel[(int)DerivedAttribute.Critical_Damage] = new GameValue(0, 0);
-            npc.derivedPerLevel[(int)DerivedAttribute.Perception] = new GameValue(0, 0);
-
-            npcs.Add(npc.key, npc); npcKeys.Add(npc.key);
-
-            npc = new NPCDefinition(new FantasyName("Giant Black Rat", "", ""), Species.Animal, BodySize.Small, Gender.Either, "giant_black_rat", "", "",
-                "Enemy", 1, 2, 10, 10, "", "", "", "");
-            npc.baseStart[(int)BaseAttribute.Strength] = 10; npc.baseStart[(int)BaseAttribute.Intellect] = 10;
-            npc.baseStart[(int)BaseAttribute.Endurance] = 10; npc.baseStart[(int)BaseAttribute.Wisdom] = 10;
-            npc.baseStart[(int)BaseAttribute.Agility] = 10; npc.baseStart[(int)BaseAttribute.Willpower] = 10;
-            npc.baseStart[(int)BaseAttribute.Speed] = 10; npc.baseStart[(int)BaseAttribute.Charisma] = 10;
-            npc.baseStart[(int)BaseAttribute.Senses] = 10; npc.baseStart[(int)BaseAttribute.Memory] = 10;
-            npc.BasePerLevel[(int)BaseAttribute.Strength] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Intellect] = new GameValue(0, 0);
-            npc.BasePerLevel[(int)BaseAttribute.Endurance] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Wisdom] = new GameValue(0, 0);
-            npc.BasePerLevel[(int)BaseAttribute.Agility] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Willpower] = new GameValue(0, 0);
-            npc.BasePerLevel[(int)BaseAttribute.Speed] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Charisma] = new GameValue(0, 0);
-            npc.BasePerLevel[(int)BaseAttribute.Senses] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Memory] = new GameValue(0, 0);
-            npc.derivedPerLevel[(int)DerivedAttribute.Armor] = new GameValue(0, 0);
-            npc.derivedPerLevel[(int)DerivedAttribute.Health] = new GameValue(1, 2); npc.derivedPerLevel[(int)DerivedAttribute.Stamina] = new GameValue(1, 1);
+            npc.derivedPerLevel[(int)DerivedAttribute.Health] = new GameValue(2, 4); npc.derivedPerLevel[(int)DerivedAttribute.Stamina] = new GameValue(1, 1);
             npc.derivedPerLevel[(int)DerivedAttribute.Essence] = new GameValue(0, 1); npc.derivedPerLevel[(int)DerivedAttribute.Morale] = new GameValue(0, 0);
             npc.derivedPerLevel[(int)DerivedAttribute.Might_Attack] = new GameValue(0, 0); npc.derivedPerLevel[(int)DerivedAttribute.Finesse_Attack] = new GameValue(0, 0);
             npc.derivedPerLevel[(int)DerivedAttribute.Block] = new GameValue(0, 0); npc.derivedPerLevel[(int)DerivedAttribute.Dodge] = new GameValue(0, 0);
@@ -2167,8 +2143,7 @@ namespace Descension.Core
             npc.derivedPerLevel[(int)DerivedAttribute.Perception] = new GameValue(0, 0);
             npcs.Add(npc.key, npc); npcKeys.Add(npc.key);
 
-            npc = new NPCDefinition(new FantasyName("Skeleton", "", ""), Species.Undead, BodySize.Small, Gender.Either, "Skeleton", "", "",
-                 "Enemy", 2, 10, 20, 10, "", "", "", "");
+            npc = new NPCDefinition(new FantasyName("Skeleton", "", "Archer"), Species.Undead, BodySize.Small, Gender.Either, "Skeleton Archer 01", "Skeleton Archer 01", Faction.Enemy, 1, 3, 20);
             npc.baseStart[(int)BaseAttribute.Strength] = 10; npc.baseStart[(int)BaseAttribute.Intellect] = 10;
             npc.baseStart[(int)BaseAttribute.Endurance] = 10; npc.baseStart[(int)BaseAttribute.Wisdom] = 10;
             npc.baseStart[(int)BaseAttribute.Agility] = 10; npc.baseStart[(int)BaseAttribute.Willpower] = 10;
@@ -2180,8 +2155,29 @@ namespace Descension.Core
             npc.BasePerLevel[(int)BaseAttribute.Speed] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Charisma] = new GameValue(0, 0);
             npc.BasePerLevel[(int)BaseAttribute.Senses] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Memory] = new GameValue(0, 0);
             npc.derivedPerLevel[(int)DerivedAttribute.Armor] = new GameValue(0, 0);
-            npc.derivedPerLevel[(int)DerivedAttribute.Health] = new GameValue(12, 15); npc.derivedPerLevel[(int)DerivedAttribute.Stamina] = new GameValue(1, 1);
+            npc.derivedPerLevel[(int)DerivedAttribute.Health] = new GameValue(2, 3); npc.derivedPerLevel[(int)DerivedAttribute.Stamina] = new GameValue(1, 1);
             npc.derivedPerLevel[(int)DerivedAttribute.Essence] = new GameValue(0, 1); npc.derivedPerLevel[(int)DerivedAttribute.Morale] = new GameValue(0, 0);
+            npc.derivedPerLevel[(int)DerivedAttribute.Might_Attack] = new GameValue(0, 0); npc.derivedPerLevel[(int)DerivedAttribute.Finesse_Attack] = new GameValue(0, 0);
+            npc.derivedPerLevel[(int)DerivedAttribute.Block] = new GameValue(0, 0); npc.derivedPerLevel[(int)DerivedAttribute.Dodge] = new GameValue(0, 0);
+            npc.derivedPerLevel[(int)DerivedAttribute.Parry] = new GameValue(0, 0); npc.derivedPerLevel[(int)DerivedAttribute.Initiative] = new GameValue(0, 0);
+            npc.derivedPerLevel[(int)DerivedAttribute.Critical_Strike] = new GameValue(0, 0); npc.derivedPerLevel[(int)DerivedAttribute.Critical_Damage] = new GameValue(0, 0);
+            npc.derivedPerLevel[(int)DerivedAttribute.Perception] = new GameValue(0, 0);
+            npcs.Add(npc.key, npc); npcKeys.Add(npc.key);
+
+            npc = new NPCDefinition(new FantasyName("Zombie", "", ""), Species.Undead, BodySize.Small, Gender.Either, "Zombie 01", "Zombie 01", Faction.Enemy, 1, 3, 20);
+            npc.baseStart[(int)BaseAttribute.Strength] = 10; npc.baseStart[(int)BaseAttribute.Intellect] = 10;
+            npc.baseStart[(int)BaseAttribute.Endurance] = 10; npc.baseStart[(int)BaseAttribute.Wisdom] = 10;
+            npc.baseStart[(int)BaseAttribute.Agility] = 10; npc.baseStart[(int)BaseAttribute.Willpower] = 10;
+            npc.baseStart[(int)BaseAttribute.Speed] = 10; npc.baseStart[(int)BaseAttribute.Charisma] = 10;
+            npc.baseStart[(int)BaseAttribute.Senses] = 10; npc.baseStart[(int)BaseAttribute.Memory] = 10;
+            npc.BasePerLevel[(int)BaseAttribute.Strength] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Intellect] = new GameValue(0, 0);
+            npc.BasePerLevel[(int)BaseAttribute.Endurance] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Wisdom] = new GameValue(0, 0);
+            npc.BasePerLevel[(int)BaseAttribute.Agility] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Willpower] = new GameValue(0, 0);
+            npc.BasePerLevel[(int)BaseAttribute.Speed] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Charisma] = new GameValue(0, 0);
+            npc.BasePerLevel[(int)BaseAttribute.Senses] = new GameValue(0, 0); npc.BasePerLevel[(int)BaseAttribute.Memory] = new GameValue(0, 0);
+            npc.derivedPerLevel[(int)DerivedAttribute.Armor] = new GameValue(0, 0);
+            npc.derivedPerLevel[(int)DerivedAttribute.Health] = new GameValue(3, 4); npc.derivedPerLevel[(int)DerivedAttribute.Stamina] = new GameValue(1, 1);
+            npc.derivedPerLevel[(int)DerivedAttribute.Essence] = new GameValue(0, 0); npc.derivedPerLevel[(int)DerivedAttribute.Morale] = new GameValue(0, 0);
             npc.derivedPerLevel[(int)DerivedAttribute.Might_Attack] = new GameValue(0, 0); npc.derivedPerLevel[(int)DerivedAttribute.Finesse_Attack] = new GameValue(0, 0);
             npc.derivedPerLevel[(int)DerivedAttribute.Block] = new GameValue(0, 0); npc.derivedPerLevel[(int)DerivedAttribute.Dodge] = new GameValue(0, 0);
             npc.derivedPerLevel[(int)DerivedAttribute.Parry] = new GameValue(0, 0); npc.derivedPerLevel[(int)DerivedAttribute.Initiative] = new GameValue(0, 0);

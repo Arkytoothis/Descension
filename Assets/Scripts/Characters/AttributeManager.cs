@@ -53,23 +53,28 @@ namespace Descension.Characters
 
             if (attribute == (int)DerivedAttribute.Armor)
             {
-                onArmorChange(cur, max);
+                if(onArmorChange != null)
+                    onArmorChange(cur, max);
             }
             else if (attribute == (int)DerivedAttribute.Health)
             {
-                onHealthChange(cur, max);
+                if (onHealthChange != null)
+                    onHealthChange(cur, max);
             }
             else if (attribute == (int)DerivedAttribute.Stamina)
             {
-                onStaminaChange(cur, max);
+                if (onStaminaChange != null)
+                    onStaminaChange(cur, max);
             }
             else if (attribute == (int)DerivedAttribute.Essence)
             {
-                onEssenceChange(cur, max);
+                if (onEssenceChange != null)
+                    onEssenceChange(cur, max);
             }
             else if (attribute == (int)DerivedAttribute.Morale)
             {
-                onMoraleChange(cur, max);
+                if (onMoraleChange != null)
+                    onMoraleChange(cur, max);
             }
 
             CheckVitals();

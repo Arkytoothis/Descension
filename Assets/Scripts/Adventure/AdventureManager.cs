@@ -12,6 +12,10 @@ namespace Descension
 {
     public class AdventureManager : Singleton<AdventureManager>
     {
+        public enum Mode { Explore, Encounter }
+
+        [SerializeField] Mode mode = Mode.Explore;
+
         [SerializeField] Camera mainCamera = null;
         [SerializeField] AdventureGuiManager guiManager = null;
 
@@ -27,6 +31,11 @@ namespace Descension
 
         [SerializeField] PartySpawner partySpawner = null;
         [SerializeField] Transform partyParent = null;
+
+        [SerializeField] Transform exploreCameraMount = null;
+        [SerializeField] Transform encounterCameraMount = null;
+
+        [SerializeField] PartyMover partyMover = null;
 
         private void Awake()
         {
@@ -53,11 +62,14 @@ namespace Descension
             PcManager.instance.Load();
             PcManager.instance.SetupParty();
 
+            NpcManager.instance.Initialize();
+
             guiManager.Initialize(currentQuest);
 
             //AudioManager.instance.PlayMusic("Caves of Madness", 0, 5f);
-            AudioManager.instance.PlayAmbient("Castle Abandoned");
+            AudioManager.instance.PlayAmbient("Castle Abandoned", true);
 
+            ExploreMode();
             return null;
         }
 
@@ -126,7 +138,39 @@ namespace Descension
         {
             PcManager.instance.SelectPc(pcData.PartyIndex);
             guiManager.SelectPc(pcData);
-            mainCamera.gameObject.GetComponent<CameraController>().SetTarget(PcManager.instance.PcObjects[pcData.PartyIndex].transform);
+            //mainCamera.gameObject.GetComponent<CameraController>().SetTarget(PcManager.instance.PcObjects[pcData.PartyIndex].transform);
+        }
+
+        public void SetMode(Mode mode)
+        {
+            switch (mode)
+            {
+                case Mode.Explore:
+                    ExploreMode();
+                    break;
+                case Mode.Encounter:
+                    EncounterMode();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void ExploreMode()
+        {
+            partyMover.EnableControl();
+            guiManager.ExploreMode();
+            mainCamera.transform.SetParent(exploreCameraMount, false);
+            mainCamera.transform.rotation = exploreCameraMount.rotation;
+
+        }
+
+        private void EncounterMode()
+        {
+            partyMover.DisableControl();
+            guiManager.EncounterMode();
+            mainCamera.transform.SetParent(encounterCameraMount, false);
+            mainCamera.transform.rotation = encounterCameraMount.rotation;
         }
     }
 }

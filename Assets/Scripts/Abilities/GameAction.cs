@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Descension.Abilities
+namespace Descension
 {
     public class GameAction : MonoBehaviour
     {
+        public enum Type { Power, Spell, Action, Number, None };
 
     }
 }

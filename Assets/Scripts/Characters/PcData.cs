@@ -68,7 +68,7 @@ namespace Descension.Characters
             gender = Gender.None;
             background = null;
             status = PcStatus.Idle;
-            faction = "Player";
+            faction = Faction.Player;
             raceKey = "";
             professionKey = "";
             description = "";
@@ -149,7 +149,7 @@ namespace Descension.Characters
 
             abilities = new CharacterAbilities(this, power_slots, spell_slots);
             inventory = new CharacterInventory();
-            faction = "Player";
+            faction = Faction.Player;
         }
 
         public PcData(PcData pc)
@@ -199,7 +199,7 @@ namespace Descension.Characters
 
             abilities = new CharacterAbilities(pc);
             inventory = new CharacterInventory(pc.inventory);
-            faction = "Player";
+            faction = Faction.Player;
         }
 
         public override void CalculateStartSkills()

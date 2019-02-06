@@ -10,8 +10,6 @@ namespace Descension
     {
         [SerializeField] bool isEnabled = true;
         [SerializeField] CameraRaycaster raycaster = null;
-        [SerializeField] GameObject sphere = null;
-
         [SerializeField] RaycastHit hit;
 
         public bool IsEnabled
@@ -29,35 +27,34 @@ namespace Descension
         {
             raycaster.onMouseOverWalkable += OnMouseOverWalkable;
             raycaster.onMouseOverObstacle += OnMouseOverObstacle;
-
-            //InvokeRepeating("UpdatePathLine", 0.1f, 0.1f);
-        }
-
-        private void Update()
-        {
-            if (Input.GetMouseButtonUp(1) == true)
-            {
-                AdventurePathManager.instance.SetDestination(transform);
-            }
         }
 
         public bool OnMouseOverWalkable(RaycastHit hit)
         {
             transform.position = hit.point;
-            PcManager.instance.GetSelectedPcObject().GetComponentInChildren<PcPathController>().FindPath(hit.transform);
-            //Vector3 pc = PcManager.instance.GetSelectedPcObject().transform.position;
-            //string distance =  Vector3.Distance(pc, this.hit.point).ToString();
-
-            //WorldCursorTooltip.instance.UpdateDistance(distance);
+            //WorldCursorTooltip.instance.UpdateText(hit.collider.gameObject.name, "", "");
 
             return true;
         }
 
         public bool OnMouseOverObstacle(RaycastHit hit)
         {
-            WorldCursorTooltip.instance.UpdateDistance("Can't Move");
+            transform.position = hit.point;
+            //WorldCursorTooltip.instance.UpdateText(hit.collider.gameObject.name, "", "");
 
             return true;
+        }
+
+        public void Enable()
+        {
+            gameObject.SetActive(true);
+            //WorldCursorTooltip.instance.gameObject.SetActive(true);
+        }
+
+        public void Disable()
+        {
+            gameObject.SetActive(false);
+            //WorldCursorTooltip.instance.gameObject.SetActive(false);
         }
     }
 }

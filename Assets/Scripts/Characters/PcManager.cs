@@ -15,9 +15,6 @@ namespace Descension
         [SerializeField] PartyData partyData = null;
         public PartyData PartyData { get { return partyData; } }
 
-        [SerializeField] List<GameObject> pcObjects = new List<GameObject>();
-        public List<GameObject> PcObjects { get { return pcObjects; } set { pcObjects = value; } }
-
         [SerializeField] int partySize = 0;
         public int PartySize { get { return partySize; } }
 
@@ -39,7 +36,6 @@ namespace Descension
 
                 partyData = new PartyData(4);
                 pcDataList = new List<PcData>();
-                pcObjects = new List<GameObject>();
             }
         }
 
@@ -58,7 +54,7 @@ namespace Descension
             pcDataList.Add(PcGenerator.Generate(pcDataList.Count, Gender.Female, "", "Rogue"));
             pcDataList.Add(PcGenerator.Generate(pcDataList.Count, Gender.Male, "", "Citizen"));
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 14; i++)
             {
                 pcDataList.Add(PcGenerator.Generate(pcDataList.Count, Gender.None, "", ""));
             }
@@ -118,39 +114,23 @@ namespace Descension
 
         public void SetupParty()
         {
-
             for (int i = 0; i < pcDataList.Count; i++)
             {
                 if (pcDataList[i].PartyIndex != -1)
                 {
                     partyData.AddPc(pcDataList[i]);
                     partyData.Pcs[pcDataList[i].PartyIndex].PartyIndex = i;
+                    partyData.Pcs[pcDataList[i].PartyIndex].XCell = 0;
+                    partyData.Pcs[pcDataList[i].PartyIndex].YCell = 0;
                 }
             }
 
             partySize = partyData.Pcs.Count;
         }
 
-        public void AddPcObject(GameObject pcObject)
-        {
-            pcObjects.Add(pcObject);
-        }
-
         public void SelectPc(int index)
         {
             selectedPcIndex = index;
-        }
-
-        public GameObject GetSelectedPcObject()
-        {
-            if (selectedPcIndex != -1)
-            {
-                return pcObjects[selectedPcIndex];
-            }
-            else
-            {
-                return null;
-            }
         }
 
         public PcData GetSelectedPc()

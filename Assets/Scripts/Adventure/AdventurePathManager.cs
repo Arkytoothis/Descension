@@ -19,15 +19,15 @@ namespace Descension
 
         public void SetDestination(Transform destination)
         {
-            for (int i = 0; i < pcManager.PcObjects.Count; i++)
-            {
-                if (pcManager.SelectedPcIndex == i)
-                {
-                    PcPathController controller = pcManager.PcObjects[i].GetComponent<PcPathController>();
-                    controller.enabled = true;
-                    controller.MoveTo(destination);
-                }
-            }
+            //for (int i = 0; i < pcManager.PcObjects.Count; i++)
+            //{
+            //    if (pcManager.SelectedPcIndex == i)
+            //    {
+            //        PcPathController controller = pcManager.PcObjects[i].GetComponent<PcPathController>();
+            //        controller.enabled = true;
+            //        controller.MoveTo(destination);
+            //    }
+            //}
         }
 
         public void UpdateGraph()

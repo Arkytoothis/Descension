@@ -355,4 +355,10 @@ namespace Descension.Core
         Miniscule, Tiny, Small, Medium, Large, Huge, Gigantic,
         Number, None
     }
+
+    public enum Faction
+    {
+        Player, Enemy, Neutral,
+        Number, None
+    }
 }

@@ -23,8 +23,8 @@ namespace Descension
 
         [SerializeField] Vector2 hotspot = Vector2.zero;
 
-        public delegate bool OnMouseOverTerrain(RaycastHit hit);
-        public event OnMouseOverTerrain onMouseOverWalkable = null;
+        public delegate bool OnMouseOverWalkable(RaycastHit hit);
+        public event OnMouseOverWalkable onMouseOverWalkable = null;
 
         public delegate bool OnMouseOverEnemy(GameObject go);
         public event OnMouseOverEnemy onMouseOverEnemy = null;
@@ -35,8 +35,8 @@ namespace Descension
         public delegate bool OnMouseOverObstacle(RaycastHit hit);
         public event OnMouseOverObstacle onMouseOverObstacle = null;
 
-        const int WALKABLE_LAYER_NUMBER = 9;
-        const int OBSTACLE_LAYER_NUMBER = 10;
+        public const int WALKABLE_LAYER_NUMBER = 9;
+        public const int OBSTACLE_LAYER_NUMBER = 10;
 
         bool raycastingEnabled = true;
 
@@ -76,6 +76,8 @@ namespace Descension
         void PerformRaycasts()
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            WorldCursorTooltip.instance.UpdateText("", "", "");
 
             if (RaycastForEnemy(ray) == true) { return; }
             if (RaycastForInteraction(ray) == true) { return; }
